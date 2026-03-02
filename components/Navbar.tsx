@@ -28,8 +28,6 @@ export default function Navbar() {
     ? "text-[#1a1916]/60 hover:text-[#1a1916]"
     : "text-white/80 hover:text-white";
 
-  const logoBase = scrolled ? "text-[#1a1916]" : "text-white";
-
   return (
     <>
       <motion.nav
@@ -44,11 +42,13 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className={`font-bold text-lg tracking-[0.25em] uppercase transition-colors duration-300 ${logoBase}`}
-          >
-            <span className="text-[#E8500A]">Born</span>stellar
+          <Link href="/" className="flex items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logotest.png"
+              alt="Bornstellar"
+              style={{ height: "40px", width: "auto" }}
+            />
           </Link>
 
           {/* Desktop Nav */}

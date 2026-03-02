@@ -88,7 +88,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full h-screen min-h-[600px] overflow-hidden bg-[#0e0d0c]"
+      className="relative w-full h-[100dvh] overflow-hidden bg-[#0e0d0c]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -125,7 +125,7 @@ export default function HeroSection() {
       />
 
       {/* Main content */}
-      <div className="relative z-10 h-full flex flex-col justify-end pb-16 lg:pb-20">
+      <div className="relative z-10 h-full flex flex-col justify-center pt-20 pb-16 lg:pt-24 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
           <div className="flex items-end justify-between gap-8">
 

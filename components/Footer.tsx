@@ -32,11 +32,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand column */}
           <div className="lg:col-span-2 flex flex-col gap-6">
-            <Link
-              href="/"
-              className="font-bold text-xl tracking-[0.25em] uppercase text-[var(--fg)]"
-            >
-              <span className="text-[#E8500A]">Born</span>stellar
+            <Link href="/" className="flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logotest.png"
+                alt="Bornstellar"
+                style={{ height: "36px", width: "auto" }}
+              />
             </Link>
             <p className="text-sm text-[var(--fg-muted)] leading-relaxed max-w-xs">
               A multi-division African company delivering integrated technology,
