@@ -10,7 +10,7 @@ const heroSlides = [
     id: 0,
     image:
       "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1800&q=85&auto=format&fit=crop",
-    overline: "Multi-Division Platform · Ibadan, Nigeria",
+    // overline: "Multi-Division Platform · Ibadan, Nigeria",
     headline: ["Future-ready", "solutions for", "Africa's growth."],
     sub: "12 specialised divisions. One integrated strategy. Built for the continent's next century.",
     cta: { label: "Discover Bornstellar", href: "/about" },
@@ -19,7 +19,7 @@ const heroSlides = [
     id: 1,
     image:
       "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1800&q=85&auto=format&fit=crop",
-    overline: "Energy & Natural Resources",
+    // overline: "Energy & Natural Resources",
     headline: ["Clean power", "for Africa's", "energy future."],
     sub: "From solar deployments to off-grid hybrid systems — accelerating Africa's clean energy transition.",
     cta: { label: "Explore Energy", href: "/divisions/renewable-energy" },
@@ -28,7 +28,7 @@ const heroSlides = [
     id: 2,
     image:
       "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1800&q=85&auto=format&fit=crop",
-    overline: "Food & Agricultural Systems",
+    // overline: "Food & Agricultural Systems",
     headline: ["Strengthening", "Africa's food", "value chains."],
     sub: "From primary production to market access — building resilient food systems across the continent.",
     cta: { label: "Explore Agriculture", href: "/divisions/agricultural-business" },
@@ -37,7 +37,7 @@ const heroSlides = [
     id: 3,
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&q=85&auto=format&fit=crop",
-    overline: "Built Environment & Mobility",
+    // overline: "Built Environment & Mobility",
     headline: ["Infrastructure", "that connects", "markets & people."],
     sub: "Real estate, construction, and mobility solutions that drive connectivity and economic productivity.",
     cta: { label: "Explore Infrastructure", href: "/divisions/construction-infrastructure" },
@@ -76,7 +76,6 @@ export default function HeroSection() {
 
   useEffect(() => {
     if (paused) return;
-    setProgress(0);
     const step = (60 / SLIDE_DURATION) * 100;
     progressRef.current = setInterval(() => {
       setProgress((p) => Math.min(p + step, 100));
@@ -131,7 +130,7 @@ export default function HeroSection() {
 
             {/* Left — text + CTAs */}
             <div className="flex-1 min-w-0">
-              <AnimatePresence mode="wait">
+              {/* <AnimatePresence mode="wait">
                 <motion.p
                   key={`overline-${slide.id}`}
                   initial={{ opacity: 0, y: 12 }}
@@ -142,7 +141,7 @@ export default function HeroSection() {
                 >
                   {slide.overline}
                 </motion.p>
-              </AnimatePresence>
+              </AnimatePresence> */}
 
               <div className="mb-7">
                 <AnimatePresence mode="wait">
