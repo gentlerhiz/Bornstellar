@@ -77,17 +77,19 @@ export default function WhoWeAreSection() {
 
   useEffect(() => {
     if (paused) return;
-    setProgress(0);
     const step = (60 / WHO_TAB_DURATION) * 100;
     const id = setInterval(() => setProgress((p) => Math.min(p + step, 100)), 60);
-    return () => clearInterval(id);
+    return () => {
+      clearInterval(id);
+      setProgress(0);
+    };
   }, [current, paused]);
 
   const tab = whoWeAreTabs[current];
 
   return (
     <section
-      className="bg-[var(--bg)] py-24 border-t border-[var(--border)]"
+      className="bg-(--bg) py-24 border-t border-(--border)"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -96,26 +98,26 @@ export default function WhoWeAreSection() {
         {/* Section header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div>
-            <p className="text-xs text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-4">
+            <p className="text-xs text-orange tracking-[0.3em] uppercase font-medium mb-4">
               Who We Are
             </p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--fg)] leading-tight">
-              Built for Africa's complexity.
+            <h2 className="text-4xl lg:text-5xl font-bold text-(--fg) leading-tight">
+              Built for Africa&apos;s complexity.
             </h2>
           </div>
           <Link
             href="/about"
-            className="text-xs text-[var(--fg-muted)] tracking-[0.15em] uppercase font-medium hover:text-[#E8500A] transition-colors duration-200 shrink-0"
+            className="text-xs text-(--fg-muted) tracking-[0.15em] uppercase font-medium hover:text-orange transition-colors duration-200 shrink-0"
           >
             Our Full Story →
           </Link>
         </div>
 
         {/* Two-panel layout */}
-        <div className="grid lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_480px] gap-0 border border-[var(--border)]">
+        <div className="grid lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_480px] gap-0 border border-(--border)">
 
           {/* Left — image panel */}
-          <div className="relative overflow-hidden min-h-[420px] lg:min-h-[560px] bg-[#0e0d0c]">
+          <div className="relative overflow-hidden min-h-105 lg:min-h-140 bg-[#0e0d0c]">
             <AnimatePresence mode="sync">
               <motion.div
                 key={tab.id}
@@ -132,8 +134,8 @@ export default function WhoWeAreSection() {
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 65vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0d0c]/80 via-[#0e0d0c]/20 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0e0d0c]/30" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0e0d0c]/80 via-[#0e0d0c]/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#0e0d0c]/30" />
               </motion.div>
             </AnimatePresence>
 
@@ -155,7 +157,7 @@ export default function WhoWeAreSection() {
                   </p>
                   <Link
                     href={tab.cta.href}
-                    className="inline-flex items-center gap-2 h-10 px-6 bg-[#E8500A] text-white text-xs font-semibold tracking-[0.15em] uppercase hover:bg-[#ff6b2b] transition-colors duration-300"
+                    className="inline-flex items-center gap-2 h-10 px-6 bg-orange text-white text-xs font-semibold tracking-[0.15em] uppercase hover:bg-orange-hover transition-colors duration-300"
                   >
                     {tab.cta.label} →
                   </Link>
@@ -165,7 +167,7 @@ export default function WhoWeAreSection() {
           </div>
 
           {/* Right — tab stack */}
-          <div className="flex flex-col divide-y divide-[var(--border)] border-l border-[var(--border)] bg-[var(--bg)]">
+          <div className="flex flex-col divide-y divide-(--border) border-l border-(--border) bg-(--bg)">
             {whoWeAreTabs.map((t, i) => {
               const isActive = i === current;
               return (
@@ -175,14 +177,14 @@ export default function WhoWeAreSection() {
                   aria-label={`View ${t.tab}`}
                   onClick={() => goTo(i)}
                   className={`group relative flex flex-col text-left px-8 py-7 transition-colors duration-300 ${
-                    isActive ? "bg-[#0e0d0c]" : "hover:bg-[var(--bg-alt)]"
+                    isActive ? "bg-[#0e0d0c]" : "hover:bg-(--bg-alt)"
                   }`}
                 >
                   {/* Progress bar — left edge */}
-                  <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[var(--border)]">
+                  <div className="absolute left-0 top-0 bottom-0 w-0.75 bg-(--border)">
                     {isActive && (
                       <motion.div
-                        className="absolute top-0 left-0 right-0 bg-[#E8500A]"
+                        className="absolute top-0 left-0 right-0 bg-orange"
                         style={{ height: `${progress}%` }}
                       />
                     )}
@@ -190,17 +192,17 @@ export default function WhoWeAreSection() {
 
                   <div className="flex items-center justify-between mb-1">
                     <span className={`text-[10px] tracking-[0.3em] font-semibold transition-colors duration-300 ${
-                      isActive ? "text-[#E8500A]" : "text-[var(--fg-faint)] group-hover:text-[#E8500A]/60"
+                      isActive ? "text-orange" : "text-(--fg-faint) group-hover:text-orange/60"
                     }`}>
                       {t.number}
                     </span>
                     {isActive && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#E8500A]" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange" />
                     )}
                   </div>
 
                   <span className={`text-base font-semibold leading-snug transition-colors duration-300 ${
-                    isActive ? "text-white" : "text-[var(--fg)] group-hover:text-[var(--fg)]"
+                    isActive ? "text-white" : "text-(--fg) group-hover:text-(--fg)"
                   }`}>
                     {t.tab}
                   </span>
@@ -219,8 +221,8 @@ export default function WhoWeAreSection() {
             })}
 
             {/* Bottom — counter + nav */}
-            <div className="mt-auto px-8 py-6 flex items-center justify-between border-t border-[var(--border)]">
-              <span className="text-xs text-[var(--fg-faint)] tabular-nums tracking-widest">
+            <div className="mt-auto px-8 py-6 flex items-center justify-between border-t border-(--border)">
+              <span className="text-xs text-(--fg-faint) tabular-nums tracking-widest">
                 {String(current + 1).padStart(2, "0")} / {String(whoWeAreTabs.length).padStart(2, "0")}
               </span>
               <div className="flex gap-2">
@@ -230,8 +232,8 @@ export default function WhoWeAreSection() {
                     type="button"
                     aria-label={`Go to slide ${i + 1}`}
                     onClick={() => goTo(i)}
-                    className={`w-6 h-[2px] transition-all duration-300 ${
-                      i === current ? "bg-[#E8500A]" : "bg-[var(--border)] hover:bg-[var(--fg-faint)]"
+                    className={`w-6 h-0.5 transition-all duration-300 ${
+                      i === current ? "bg-orange" : "bg-(--border) hover:bg-(--fg-faint)"
                     }`}
                   />
                 ))}

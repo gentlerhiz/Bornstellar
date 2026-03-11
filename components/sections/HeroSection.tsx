@@ -87,7 +87,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full h-[100dvh] overflow-hidden bg-[#0e0d0c]"
+      className="relative w-full h-dvh overflow-hidden bg-[#0e0d0c]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -109,8 +109,8 @@ export default function HeroSection() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0e0d0c]/90 via-[#0e0d0c]/40 to-[#0e0d0c]/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0e0d0c]/60 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#0e0d0c]/90 via-[#0e0d0c]/40 to-[#0e0d0c]/20" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#0e0d0c]/60 to-transparent" />
         </motion.div>
       </AnimatePresence>
 
@@ -120,7 +120,7 @@ export default function HeroSection() {
         animate={{ scaleX: 1 }}
         transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
         style={{ transformOrigin: "left" }}
-        className="absolute top-0 left-0 right-0 h-[2px] bg-[#E8500A] z-20"
+        className="absolute top-0 left-0 right-0 h-0.5 bg-orange z-20"
       />
 
       {/* Main content */}
@@ -153,7 +153,7 @@ export default function HeroSection() {
                         exit={{ y: "-105%", opacity: 0 }}
                         transition={{ duration: 0.75, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                         className={`block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.02] tracking-tight ${
-                          i === 2 ? "text-[#E8500A]" : "text-white"
+                          i === 2 ? "text-orange" : "text-white"
                         }`}
                       >
                         {line}
@@ -188,7 +188,7 @@ export default function HeroSection() {
                 >
                   <Link
                     href={slide.cta.href}
-                    className="inline-flex h-12 px-8 items-center bg-[#E8500A] text-white text-sm font-semibold tracking-[0.12em] uppercase hover:bg-[#ff6b2b] transition-colors duration-300"
+                    className="inline-flex h-12 px-8 items-center bg-orange text-white text-sm font-semibold tracking-[0.12em] uppercase hover:bg-orange-hover transition-colors duration-300"
                   >
                     {slide.cta.label}
                   </Link>
@@ -232,9 +232,9 @@ export default function HeroSection() {
                   aria-label={`Go to slide ${i + 1}`}
                   className="flex items-center gap-3 group"
                 >
-                  <div className="w-[2px] h-8 bg-white/15 overflow-hidden">
+                  <div className="w-0.5 h-8 bg-white/15 overflow-hidden">
                     {i === current ? (
-                      <motion.div className="w-full bg-[#E8500A]" style={{ height: `${progress}%` }} />
+                      <motion.div className="w-full bg-orange" style={{ height: `${progress}%` }} />
                     ) : i < current ? (
                       <div className="w-full h-full bg-white/40" />
                     ) : null}
@@ -264,7 +264,7 @@ export default function HeroSection() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-          className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent"
+          className="w-px h-10 bg-linear-to-b from-white/30 to-transparent"
         />
       </motion.div>
     </section>

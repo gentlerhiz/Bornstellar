@@ -81,21 +81,21 @@ const values = [
 
 export default function ValuesSection() {
   return (
-    <section className="bg-[var(--bg)] py-18 border-t border-[var(--border)]">
+    <section className="bg-(--bg) py-18 border-t border-(--border)">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <FadeIn>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
             <div>
-              <p className="text-xs text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-4">
+              <p className="text-xs text-orange tracking-[0.3em] uppercase font-medium mb-4">
                 Our Values
               </p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[var(--fg)] leading-tight max-w-lg">
+              <h2 className="text-4xl lg:text-5xl font-bold text-(--fg) leading-tight max-w-lg">
                 Five principles that guide every decision.
               </h2>
             </div>
             <Link
               href="/about#values"
-              className="text-xs text-[var(--fg-muted)] tracking-[0.15em] uppercase font-medium hover:text-[#E8500A] transition-colors duration-200 shrink-0"
+              className="text-xs text-(--fg-muted) tracking-[0.15em] uppercase font-medium hover:text-orange transition-colors duration-200 shrink-0"
             >
               About Our Culture →
             </Link>
@@ -111,36 +111,36 @@ export default function ValuesSection() {
                   className={`p-8 flex flex-col gap-6 h-full group rounded-sm border ${
                     isDark
                       ? "bg-[#0e0d0c] border-[#2a2926]"
-                      : "bg-[var(--bg)] border-[var(--border)]"
+                      : "bg-(--bg) border-(--border)"
                   }`}
                 >
                   <span
                     className={`text-4xl font-bold select-none leading-none transition-colors duration-300 ${
                       isDark
-                        ? "text-white/10 group-hover:text-[#E8500A]/30"
-                        : "text-[var(--border)] group-hover:text-[#E8500A]/20"
+                        ? "text-white/10 group-hover:text-orange/30"
+                        : "text-(--border) group-hover:text-orange/20"
                     }`}
                   >
                     {v.number}
                   </span>
                   <div>
                     <h3
-                      className={`text-base font-semibold mb-3 group-hover:text-[#E8500A] transition-colors duration-300 ${
-                        isDark ? "text-white" : "text-[var(--fg)]"
+                      className={`text-base font-semibold mb-3 group-hover:text-orange transition-colors duration-300 ${
+                        isDark ? "text-white" : "text-(--fg)"
                       }`}
                     >
                       {v.title}
                     </h3>
                     <p
                       className={`text-sm leading-7 ${
-                        isDark ? "text-white/50" : "text-[var(--fg-muted)]"
+                        isDark ? "text-white/50" : "text-(--fg-muted)"
                       }`}
                     >
                       {v.description}
                     </p>
                   </div>
                   {/* Bottom accent line on hover */}
-                  <div className="mt-auto h-[2px] w-0 bg-[#E8500A] group-hover:w-8 transition-all duration-400" />
+                  <div className="mt-auto h-0.5 w-0 bg-orange group-hover:w-8 transition-all duration-400" />
                 </div>
               </FadeIn>
             );
@@ -148,8 +148,8 @@ export default function ValuesSection() {
 
           {/* 6th cell — Africa focus */}
           <FadeIn delay={0.45}>
-            <div className="bg-[#0e0d0c] border border-[#2a2926] rounded-sm p-8 flex flex-col justify-between h-full min-h-[260px] group">
-              <p className="text-xs text-[#E8500A] tracking-[0.25em] uppercase font-medium">
+            <div className="bg-[#0e0d0c] border border-[#2a2926] rounded-sm p-8 flex flex-col justify-between h-full min-h-65 group">
+              <p className="text-xs text-orange tracking-[0.25em] uppercase font-medium">
                 African-first
               </p>
               <div>
@@ -158,7 +158,7 @@ export default function ValuesSection() {
                 </p>
                 <Link
                   href="/about#africa-focus"
-                  className="text-xs text-white/50 hover:text-[#E8500A] transition-colors tracking-[0.15em] uppercase font-medium"
+                  className="text-xs text-white/50 hover:text-orange transition-colors tracking-[0.15em] uppercase font-medium"
                 >
                   Our Africa Focus →
                 </Link>
@@ -169,12 +169,12 @@ export default function ValuesSection() {
 
         {/* Priorities — merged */}
         <FadeIn>
-          <div className="mt-16 border-t border-[var(--border)] pt-12">
+          <div className="mt-16 border-t border-(--border) pt-12">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-              <p className="text-xs text-[#E8500A] tracking-[0.35em] uppercase font-medium">
+              <p className="text-xs text-orange tracking-[0.35em] uppercase font-medium">
                 Our Priorities
               </p>
-              <p className="text-xs text-[var(--fg-muted)] max-w-sm">
+              <p className="text-xs text-(--fg-muted) max-w-sm">
                 Four interconnected commitments that guide how we operate across every division and community.
               </p>
             </div>
@@ -182,16 +182,16 @@ export default function ValuesSection() {
               {priorities.map((p) => (
                 <div
                   key={p.category}
-                  className="group flex items-start gap-4 bg-[var(--bg-card)] border border-[var(--border)] rounded-sm p-5 hover:border-[#E8500A]/30 transition-colors duration-300"
+                  className="group flex items-start gap-4 bg-(--bg-card) border border-(--border) rounded-sm p-5 hover:border-orange/30 transition-colors duration-300"
                 >
-                  <div className="w-8 h-8 rounded-md bg-[#E8500A]/10 text-[#E8500A] flex items-center justify-center shrink-0 group-hover:bg-[#E8500A] group-hover:text-white transition-all duration-300">
+                  <div className="w-8 h-8 rounded-md bg-orange/10 text-orange flex items-center justify-center shrink-0 group-hover:bg-orange group-hover:text-white transition-all duration-300">
                     {p.icon}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-[var(--fg)] mb-1.5 group-hover:text-[#E8500A] transition-colors duration-300">
+                    <p className="text-sm font-semibold text-(--fg) mb-1.5 group-hover:text-orange transition-colors duration-300">
                       {p.category}
                     </p>
-                    <p className="text-xs text-[var(--fg-muted)] leading-5">
+                    <p className="text-xs text-(--fg-muted) leading-5">
                       {p.description}
                     </p>
                   </div>
