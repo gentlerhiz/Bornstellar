@@ -6,7 +6,6 @@ const footerLinks = {
     { href: "/about", label: "About Us" },
     { href: "/governance", label: "Leadership & Governance" },
     { href: "/sustainability", label: "Sustainability" },
-    { href: "/newsroom", label: "Newsroom" },
     { href: "/careers", label: "Careers" },
   ],
   Divisions: [

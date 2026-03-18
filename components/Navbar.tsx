@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/sustainability", label: "Sustainability" },
   { href: "/governance", label: "Governance" },
   { href: "/careers", label: "Careers" },
-  { href: "/newsroom", label: "Newsroom" },
 ];
 
 export default function Navbar() {

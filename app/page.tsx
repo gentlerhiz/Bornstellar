@@ -8,7 +8,6 @@ import DivisionsSection from "@/components/sections/DivisionsSection";
 import ValuesSection from "@/components/sections/ValuesSection";
 import WhoWeAreSection from "@/components/sections/WhoWeAreSection";
 import CtaSection from "@/components/sections/CtaSection";
-import NewsroomSection from "@/components/sections/NewsroomSection";
 import Newsletter from "@/components/Newsletter";
 
 export default function HomePage() {
@@ -24,7 +23,6 @@ export default function HomePage() {
       <ValuesSection />
       <WhoWeAreSection />
       <CtaSection />
-      <NewsroomSection />
       <Newsletter />
     </>
   );
