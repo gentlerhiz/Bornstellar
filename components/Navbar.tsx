@@ -5,10 +5,10 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { href: "/about", label: "About" },
+  { href: "/", label: "Home" },
   { href: "/divisions", label: "Divisions" },
-  { href: "/sustainability", label: "Sustainability" },
-  { href: "/governance", label: "Governance" },
+  { href: "/about", label: "About Us" },
+  { href: "/governance", label: "Leadership" },
   { href: "/careers", label: "Careers" },
 ];
 

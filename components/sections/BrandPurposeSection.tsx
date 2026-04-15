@@ -16,7 +16,7 @@ export default function BrandPurposeSection() {
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-[#E8500A]" />
               <p className="text-xs text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
-                Brand Purpose
+                Our Purpose
               </p>
             </div>
 

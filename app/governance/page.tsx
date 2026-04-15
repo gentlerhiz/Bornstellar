@@ -21,7 +21,7 @@ export default function GovernancePage() {
         subtitle="Bornstellar is governed in line with the Companies and Allied Matters Act, 2020, with a board-led structure, clear accountability frameworks, and zero tolerance for governance failures."
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Governance" },
+          { label: "Leadership" },
         ]}
       />
       <LeadershipQuoteSection />

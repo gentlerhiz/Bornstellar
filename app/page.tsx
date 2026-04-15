@@ -1,7 +1,6 @@
 import HeroSection from "@/components/sections/HeroSection";
 import MarqueeStrip from "@/components/MarqueeStrip";
 import BrandPurposeSection from "@/components/sections/BrandPurposeSection";
-import LeadershipQuoteSection from "@/components/sections/LeadershipQuoteSection";
 import QuickFactsSection from "@/components/sections/QuickFactsSection";
 import ThematicBlocksSection from "@/components/sections/ThematicBlocksSection";
 import DivisionsSection from "@/components/sections/DivisionsSection";
@@ -14,14 +13,13 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <MarqueeStrip />
-      <BrandPurposeSection />
-      <LeadershipQuoteSection />
-      <QuickFactsSection />
-      <ThematicBlocksSection />
-      <DivisionsSection />
-      <ValuesSection />
       <WhoWeAreSection />
+      <DivisionsSection />
+      <BrandPurposeSection />
+      <ValuesSection />
+      <ThematicBlocksSection />
+      <QuickFactsSection />
+      <MarqueeStrip />
       <CtaSection />
       <Newsletter />
     </>
