@@ -13,11 +13,11 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      {/* <WhoWeAreSection /> */}
+      <WhoWeAreSection />
       <DivisionsSection />
       <BrandPurposeSection />
       <ValuesSection />
-      <ThematicBlocksSection />
+      {/* <ThematicBlocksSection /> */}
       <QuickFactsSection />
       <MarqueeStrip />
       <CtaSection />
