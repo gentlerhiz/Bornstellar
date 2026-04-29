@@ -18,15 +18,16 @@ export default function LeadershipQuoteSection() {
               </svg>
 
               <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-[1.18] tracking-tight">
-                Bornstellar exists to prove that African institutions can be
-                <span className="text-[#E8500A]"> world-class by design</span> — not by accident.
+                We are building the kind of African enterprise that future generations will not inherit with excuses,   
+
+                <span className="text-[#E8500A]"> but with pride and possibilities. </span> 
               </blockquote>
 
               <div className="h-px w-12 bg-[#E8500A]" />
 
               <div>
                 <p className="text-sm font-semibold text-white tracking-[0.1em] uppercase">
-                  Olawale Adeyemi
+                  Sijuade Henry Oluwatimilehin
                 </p>
                 <p className="text-xs text-white/40 tracking-[0.15em] uppercase mt-1">
                   Chairman & Chief Executive Officer
@@ -39,7 +40,7 @@ export default function LeadershipQuoteSection() {
           <FadeIn delay={0.15}>
             <div className="relative aspect-[3/4] w-full max-w-sm mx-auto lg:mx-0 overflow-hidden rounded-sm">
               <Image
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=85&auto=format&fit=crop&crop=faces"
+                src="/ceoImage.png"
                 alt="Chairman & CEO of Bornstellar Limited"
                 fill
                 className="object-cover object-top grayscale"

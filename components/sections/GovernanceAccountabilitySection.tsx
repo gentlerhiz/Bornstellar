@@ -23,7 +23,7 @@ export default function GovernanceAccountabilitySection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Accountability */}
           <FadeIn>
-            <p className="text-xs text-orange tracking-[0.35em] uppercase font-semibold mb-6">
+            <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold mb-6">
               Accountability &amp; Transparency
             </p>
             <h2 className="text-3xl font-bold text-white mb-10 leading-tight">
@@ -43,7 +43,7 @@ export default function GovernanceAccountabilitySection() {
 
           {/* Management Structure */}
           <FadeIn delay={0.1}>
-            <p className="text-xs text-orange tracking-[0.35em] uppercase font-semibold mb-6">
+            <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold mb-6">
               Management Structure
             </p>
             <h2 className="text-3xl font-bold text-white mb-8 leading-tight">
@@ -55,7 +55,7 @@ export default function GovernanceAccountabilitySection() {
               consistency, efficiency, and control across the organisation.
             </p>
             <div className="border border-white/10 p-8 bg-white/3">
-              <p className="text-xs text-orange tracking-[0.2em] uppercase font-semibold mb-5">
+              <p className="text-sm text-orange tracking-[0.2em] uppercase font-semibold mb-5">
                 Shared Services Functions
               </p>
               <ul className="flex flex-col gap-3">

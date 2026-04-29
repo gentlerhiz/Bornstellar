@@ -7,6 +7,8 @@ import StatsSection from "@/components/sections/StatsSection";
 import LeadershipQuoteSection from "@/components/sections/LeadershipQuoteSection";
 import CtaSection from "@/components/sections/CtaSection";
 import AfricaFocusSection from "@/components/sections/AfricaFocusSection";
+import GoalsSection from "@/components/sections/GoalsSection";
+import QuickFactsSection from "@/components/sections/QuickFactsSection";
 
 export const metadata: Metadata = {
   title: "About Bornstellar — Nigeria's Multi-Division Corporate Platform",
@@ -24,10 +26,12 @@ export default function AboutPage() {
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
       />
       <CoreBrandSection />
+      <GoalsSection />
       <VisionMissionSection />
       <ValuesSection />
+      <QuickFactsSection />
       <AfricaFocusSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <LeadershipQuoteSection />
       <CtaSection />
     </>

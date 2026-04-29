@@ -3,11 +3,11 @@
 import FadeIn from "@/components/FadeIn";
 
 const quickFacts = [
-  { number: "12", label: "Core Divisions", sub: "under one parent company" },
-  { number: "2025", label: "Year Founded", sub: "Incorporated Jan 23, 2025" },
-  { number: "NGN", label: "Jurisdiction", sub: "CAMA 2020, Nigeria" },
-  { number: "5+", label: "Sectors", sub: "Tech, Agri, Energy, Infrastructure, Finance" },
-  { number: "3", label: "African Regions", sub: "West, East & Southern Africa focus" },
+  { number: "30+", label: "Companies / Businesses", sub: "Served" },
+  { number: "3+", label: "Years", sub: "In service" },
+  { number: "Top 100", label: "Fastest", sub: "" },
+  { number: "3", label: "Regions", sub: "Partners across 3 regions" },
+  { number: "5+", label: "Sectors", sub: "Multiple sectors" },
 ];
 
 export default function QuickFactsSection() {
@@ -15,7 +15,7 @@ export default function QuickFactsSection() {
     <section className="bg-[#0e0d0c] border-t border-white/8 py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <FadeIn>
-          <p className="text-xs text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-12 text-center">
+          <p className="text-sm text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-12 text-center">
             Quick Facts
           </p>
         </FadeIn>

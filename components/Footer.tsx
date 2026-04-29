@@ -40,9 +40,9 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm text-[var(--fg-muted)] leading-relaxed max-w-xs">
-              A multi-division African company delivering integrated technology,
-              infrastructure, energy, manufacturing, and advisory solutions that
-              power sustainable development across the continent.
+              Bornstellar is building the systems that power Africa's growth across technology, infrastructure, energy, and industry.
+              Through specialized divisions operating in coordination, we deliver world-class solutions that unlock opportunity and scale impact.
+              In partnership with AFTRACON, we are committed to empowering Africans and advancing sustainable development across the continent.
             </p>
             <div className="flex flex-col gap-1 text-xs text-[var(--fg-faint)]">
               <span>Ibadan, Oyo State, Nigeria</span>

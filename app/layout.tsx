@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Bornstellar Limited — Future-ready solutions for Africa's growth",
   description:
-    "Bornstellar is a multi-division African company delivering integrated technology, infrastructure, energy, manufacturing, and advisory solutions that power sustainable development across the continent.",
+    "Bornstellar is building the systems that power Africa's growth across technology, infrastructure, energy, and industry. Through specialized divisions operating in coordination, we deliver world-class solutions that unlock opportunity and scale impact. In partnership with AFTRACON, we are committed to empowering Africans and advancing sustainable development across the continent.",
   keywords: [
     "Bornstellar",
     "Africa",

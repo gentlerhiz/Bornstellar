@@ -60,7 +60,7 @@ export default function DivisionsCategoriesSection() {
               <FadeIn>
                 <div className="flex items-center gap-4 mb-10">
                   <div className="w-8 h-px bg-orange" />
-                  <p className="text-xs text-orange tracking-[0.35em] uppercase font-semibold">
+                  <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold">
                     {cat.label}
                   </p>
                 </div>

@@ -15,14 +15,14 @@ export default function BrandPurposeSection() {
             {/* Overline */}
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-[#E8500A]" />
-              <p className="text-xs text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
+              <p className="text-sm text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
                 Our Purpose
               </p>
             </div>
 
             {/* Headline */}
             <h2 className="text-4xl lg:text-5xl font-bold text-[var(--fg)] leading-[1.08] tracking-tight mb-8">
-              Transforming Africa's potential into enduring prosperity.
+              Transforming Africa&apos;s potential into enduring prosperity.
             </h2>
 
             {/* Divider */}
@@ -32,7 +32,7 @@ export default function BrandPurposeSection() {
             <p className="text-base text-[var(--fg-muted)] leading-8 mb-10">
               We partner with businesses, governments, and communities to design
               and execute solutions that create jobs, enable inclusive growth,
-              and strengthen Africa's position in global value chains.
+              and strengthen Africa&apos;s position in global value chains.
             </p>
 
             {/* CTAs */}
@@ -56,7 +56,7 @@ export default function BrandPurposeSection() {
           {/* Right — image */}
           <FadeIn delay={0.15} className="relative overflow-hidden rounded-sm aspect-[4/3] lg:aspect-[5/4]">
             <Image
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=85&auto=format&fit=crop"
+              src="/africa1.jpeg"
               alt="Earth from space with Africa in view — global connectivity"
               fill
               className="object-cover object-center"
@@ -68,7 +68,7 @@ export default function BrandPurposeSection() {
             <div className="absolute bottom-0 left-0 right-0 px-6 py-4 bg-[#0e0d0c]/70 backdrop-blur-sm flex items-center gap-3">
               <div className="w-1 h-6 bg-[#E8500A] shrink-0" />
               <p className="text-xs text-white/70 leading-snug tracking-wide">
-                African-first. Globally competitive. Built for the continent's next century.
+                African-first. Globally competitive. Built for the continent&apos;s next century.
               </p>
             </div>
           </FadeIn>

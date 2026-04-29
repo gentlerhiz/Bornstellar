@@ -68,7 +68,7 @@ export default function PrioritiesSection() {
         <FadeIn>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8">
             <div>
-              <p className="text-xs text-[#E8500A] tracking-[0.35em] uppercase font-medium mb-4">
+              <p className="text-sm text-[#E8500A] tracking-[0.35em] uppercase font-medium mb-4">
                 Our Priorities
               </p>
               

@@ -2,80 +2,50 @@
 
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
-
-const priorities = [
-  {
-    category: "Economic",
-    description: "Support inclusive growth, job creation, and local value addition through agriculture, manufacturing, infrastructure, and technology.",
-    icon: (
-      <svg viewBox="0 0 32 32" fill="none" className="w-5 h-5" aria-hidden="true">
-        <path d="M4 24 L10 16 L16 19 L22 10 L28 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M22 6 L28 6 L28 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    ),
-  },
-  {
-    category: "Social",
-    description: "Invest in skills, safety, and community partnerships around our projects and operations.",
-    icon: (
-      <svg viewBox="0 0 32 32" fill="none" className="w-5 h-5" aria-hidden="true">
-        <circle cx="16" cy="10" r="4" stroke="currentColor" strokeWidth="2.5"/>
-        <path d="M8 26 C8 21.582 11.582 18 16 18 C20.418 18 24 21.582 24 26" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
-      </svg>
-    ),
-  },
-  {
-    category: "Environmental",
-    description: "Promote resource efficiency, clean energy, and sustainable practices across divisions.",
-    icon: (
-      <svg viewBox="0 0 32 32" fill="none" className="w-5 h-5" aria-hidden="true">
-        <path d="M16 28 C16 28 6 22 6 14 C6 9.582 10.582 6 16 6 C21.418 6 26 9.582 26 14 C26 22 16 28 16 28Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round"/>
-        <path d="M16 28 L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-      </svg>
-    ),
-  },
-  {
-    category: "Governance",
-    description: "Uphold strong corporate governance, forensic rigor, and transparent reporting.",
-    icon: (
-      <svg viewBox="0 0 32 32" fill="none" className="w-5 h-5" aria-hidden="true">
-        <path d="M16 4 L26 8 L26 16 C26 21.523 21.523 26.77 16 28 C10.477 26.77 6 21.523 6 16 L6 8 Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round"/>
-        <path d="M11 16 L14.5 19.5 L21 13" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    ),
-  },
-];
+import QuickFactsSection from "@/components/sections/QuickFactsSection";
 
 const values = [
   {
     number: "01",
-    title: "Stewardship",
+    title: "Integrity",
     description:
-      "We take a long-term view, building assets, institutions, and capabilities that will outlive current generations and strengthen African economies.",
+      "We conduct every business with transparency, honesty, and accountability — earning the trust of our clients, partners, and the communities we serve.",
   },
   {
     number: "02",
-    title: "Integrity",
+    title: "Innovation",
     description:
-      "We operate with strict ethical standards, sound governance, and robust compliance — especially in regulated sectors and financial services.",
+      "We embrace bold thinking and technology-driven solutions to solve Africa's real-world challenges at scale.",
   },
   {
     number: "03",
     title: "Excellence",
     description:
-      "We commit to technical depth, operational discipline, and continuous improvement across all 12 divisions.",
+      "We commit to the highest standards of quality across every division, every project, and every delivery — no exceptions.",
   },
   {
     number: "04",
-    title: "Collaboration",
+    title: "Impact",
     description:
-      "We break silos to deliver integrated solutions and co-create value with partners, clients, and communities across sectors.",
+      "Every decision we make is measured against the value it creates — for people, businesses, and the broader African economy.",
   },
   {
     number: "05",
-    title: "Innovation with Purpose",
+    title: "Sustainability",
     description:
-      "We invest in research and new business models that respond to Africa's unique development context — not blindly copied models.",
+      "We build for the long term. Our projects are designed to remain economically viable, environmentally responsible, and socially beneficial for generations.",
+  },
+  {
+    number: "06",
+    title: "Collaboration",
+    description:
+      "We believe Africa's growth is a collective effort. We partner with governments, institutions, communities, and private stakeholders to deliver outcomes no single entity can achieve alone.",
+  },
+  {
+    number: "07",
+    title: "Local Pride",
+    description:
+      "We champion African talent, African resources, and African solutions — reducing dependency on imports and keeping economic value where it belongs: on the continent.",
   },
 ];
 
@@ -85,12 +55,12 @@ export default function ValuesSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <FadeIn>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
-            <div>
-              <p className="text-xs text-orange tracking-[0.3em] uppercase font-medium mb-4">
-                Our Values
+              <div>
+              <p className="text-sm text-orange tracking-[0.3em] uppercase font-medium mb-4">
+                OUR CORE VALUES
               </p>
               <h2 className="text-4xl lg:text-5xl font-bold text-(--fg) leading-tight max-w-lg">
-                Five principles that guide every decision.
+                Core principles that guide every decision.
               </h2>
             </div>
             <Link
@@ -167,39 +137,7 @@ export default function ValuesSection() {
           </FadeIn>
         </div>
 
-        {/* Priorities — merged */}
-        <FadeIn>
-          <div className="mt-16 border-t border-(--border) pt-12">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-              <p className="text-xs text-orange tracking-[0.35em] uppercase font-medium">
-                Our Priorities
-              </p>
-              <p className="text-xs text-(--fg-muted) max-w-sm">
-                Four interconnected commitments that guide how we operate across every division and community.
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {priorities.map((p) => (
-                <div
-                  key={p.category}
-                  className="group flex items-start gap-4 bg-(--bg-card) border border-(--border) rounded-sm p-5 hover:border-orange/30 transition-colors duration-300"
-                >
-                  <div className="w-8 h-8 rounded-md bg-orange/10 text-orange flex items-center justify-center shrink-0 group-hover:bg-orange group-hover:text-white transition-all duration-300">
-                    {p.icon}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-(--fg) mb-1.5 group-hover:text-orange transition-colors duration-300">
-                      {p.category}
-                    </p>
-                    <p className="text-xs text-(--fg-muted) leading-5">
-                      {p.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
+        
       </div>
     </section>
   );

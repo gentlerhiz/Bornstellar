@@ -8,13 +8,13 @@ const focuses = [
     title: "Agricultural Productivity & Food Security",
     description:
       "Scaling commercial farming, agri-input supply, and cold-chain logistics to feed Africa's growing population and capture export markets.",
-    img: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800&q=85&auto=format&fit=crop",
+    img: "/agriculture2.jpeg",
   },
   {
     title: "Digital Transformation & Knowledge Industries",
     description:
       "Delivering the IT systems, platforms, and talent that power modern African institutions and digital economies.",
-    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=85&auto=format&fit=crop",
+    img: "/Information.jpeg",
   },
   {
     title: "Housing, Urbanisation & Core Infrastructure",
@@ -51,7 +51,7 @@ export default function AfricaFocusSection() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-px bg-[#E8500A]" />
-                <p className="text-xs text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
+                <p className="text-sm text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
                   Our Africa Focus
                 </p>
               </div>

@@ -44,7 +44,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logotest.png"
+              src={scrolled ? "/logotest.png" : "/logotestwhitetext.png"}
               alt="Bornstellar"
               style={{ height: "40px", width: "auto" }}
             />

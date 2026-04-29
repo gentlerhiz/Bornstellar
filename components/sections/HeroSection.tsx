@@ -11,9 +11,9 @@ const heroSlides = [
     image:
       "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1800&q=85&auto=format&fit=crop",
     // overline: "Multi-Division Platform · Ibadan, Nigeria",
-    headline: ["Future-ready", "solutions for", "Africa's growth."],
+    headline: ["Delivering High-Quality", "Services and Solutions", "to Power Africa's Growth."],
     sub: "12 specialised divisions. One integrated strategy. Built for the continent's next century.",
-    cta: { label: "Discover Bornstellar", href: "/about" },
+    cta: { label: "Learn about Bornstellar", href: "/about" },
   },
   {
     id: 1,
@@ -196,7 +196,7 @@ export default function HeroSection() {
                     href="/divisions"
                     className="inline-flex h-12 px-8 items-center border border-white/25 text-white/70 text-sm font-semibold tracking-[0.12em] uppercase hover:border-white/60 hover:text-white transition-all duration-300"
                   >
-                    Our Divisions
+                    Explore our divisions
                   </Link>
 
                   {/* Prev / Next — inline with CTAs */}

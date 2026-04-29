@@ -9,9 +9,9 @@ import { divisions } from "@/lib/divisions";
 
 const divisionImages: Record<string, string> = {
   "information-technology":
-    "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=85&auto=format&fit=crop",
+    "/information.jpeg", 
   "agricultural-business":
-    "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800&q=85&auto=format&fit=crop",
+    "/agriculture.jpeg",
   "real-estate":
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=85&auto=format&fit=crop",
   "machinery-manufacturing":
@@ -102,7 +102,7 @@ export default function DivisionsSection() {
         <FadeIn>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10">
             <div>
-              <p className="text-xs text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-4">
+              <p className="text-sm text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-4">
                 Our Divisions
               </p>
               <h2 className="text-4xl lg:text-5xl font-bold text-[var(--fg)] leading-tight max-w-xl">

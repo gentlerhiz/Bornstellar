@@ -3,10 +3,7 @@
 import FadeIn from "@/components/FadeIn";
 
 const missionPoints = [
-  "Provide integrated, world-class solutions across technology, real assets, energy, and professional services.",
-  "Anchor investments and partnerships that deepen industrialization and value addition in Africa.",
-  "Develop African talent and leadership through structured training, knowledge transfer, and responsible governance.",
-  "Uphold rigorous standards of integrity, transparency, and risk management in every engagement.",
+  "To conceptualize, finance, and execute integrated solutions across Africa's critical sectors by combining technology, capital, and local expertise — reducing dependency on imports, creating sustainable livelihoods, and driving measurable economic growth from the ground up.",
 ];
 
 export default function VisionMissionSection() {
@@ -28,7 +25,7 @@ export default function VisionMissionSection() {
 
               {/* Left label */}
               <div className="flex flex-col gap-4">
-                <p className="text-xs text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
+                <p className="text-sm text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
                   Our Vision
                 </p>
                 <div className="w-8 h-[2px] bg-[#E8500A]" />
@@ -40,9 +37,7 @@ export default function VisionMissionSection() {
               {/* Right — vision statement */}
               <div>
                 <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] tracking-tight">
-                  To be a leading African corporate platform that builds the{" "}
-                  <span className="text-[#E8500A]">infrastructure, institutions,</span>{" "}
-                  and innovations powering the continent's next century of growth.
+                  To be Africa's leading integrated conglomerate — building industries, empowering communities, and delivering solutions that transform lives across the continent.
                 </p>
               </div>
 
@@ -59,7 +54,7 @@ export default function VisionMissionSection() {
             {/* Left label */}
             <FadeIn>
               <div className="flex flex-col gap-4">
-                <p className="text-xs text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
+                <p className="text-sm text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
                   Our Mission
                 </p>
                 <div className="w-8 h-[2px] bg-[#E8500A]" />

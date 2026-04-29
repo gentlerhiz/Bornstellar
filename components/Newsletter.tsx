@@ -40,7 +40,7 @@ export default function Newsletter() {
 
           {/* Left — copy */}
           <div>
-            <p className="text-xs text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-5">
+            <p className="text-sm text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-5">
               Stay Informed
             </p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">

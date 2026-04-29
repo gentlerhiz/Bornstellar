@@ -119,7 +119,7 @@ export default function FaqAccordionSection() {
             <div className="mb-16 last:mb-0">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-8 h-px bg-orange" />
-                <p className="text-xs text-orange tracking-[0.35em] uppercase font-semibold">
+                <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold">
                   {section.category}
                 </p>
               </div>

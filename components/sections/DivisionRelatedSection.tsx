@@ -13,7 +13,7 @@ export default function DivisionRelatedSection({ otherDivisions }: Props) {
         <FadeIn>
           <div className="flex items-center justify-between mb-10">
             <div>
-              <p className="text-xs text-orange tracking-[0.35em] uppercase font-semibold mb-2">
+              <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold mb-2">
                 Explore More
               </p>
               <h2 className="text-2xl font-bold text-(--fg)">Other Divisions</h2>

@@ -18,7 +18,7 @@ export default function MissionSection() {
           {/* Left label */}
           <FadeIn>
             <div className="flex flex-col gap-4">
-              <p className="text-xs text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
+              <p className="text-sm text-[#E8500A] tracking-[0.35em] uppercase font-semibold">
                 Our Mission
               </p>
               <div className="w-8 h-[2px] bg-[#E8500A]" />

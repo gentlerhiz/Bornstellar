@@ -29,7 +29,7 @@ export default function LegalRegulatorySection() {
           <FadeIn>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-px bg-orange" />
-              <p className="text-xs text-orange tracking-[0.35em] uppercase font-semibold">
+              <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold">
                 Regulatory Framework
               </p>
             </div>
@@ -48,7 +48,7 @@ export default function LegalRegulatorySection() {
 
           <FadeIn delay={0.1}>
             <div id="corporate" className="border border-(--border) bg-(--bg-alt) p-8 rounded-sm">
-              <p className="text-xs text-orange tracking-[0.35em] uppercase font-semibold mb-6">
+              <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold mb-6">
                 Corporate Information
               </p>
               <div className="flex flex-col divide-y divide-(--border)">

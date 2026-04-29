@@ -50,7 +50,7 @@ export default function ThematicBlocksSection() {
         <FadeIn>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
             <div>
-              <p className="text-xs text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-4">
+              <p className="text-sm text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-4">
                 Our Priorities/Goals
               </p>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--fg)] leading-tight max-w-xl">

@@ -15,7 +15,7 @@ const whoWeAreTabs = [
       "We design and deploy the systems that power modern African organisations — custom software, cloud architecture, cybersecurity and digital transformation strategies built for local realities.",
     cta: { label: "Explore Division", href: "/divisions/information-technology" },
     image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&q=90&auto=format&fit=crop",
+      "/africa2.jpeg",
   },
   {
     id: 1,
@@ -98,7 +98,7 @@ export default function WhoWeAreSection() {
         {/* Section header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div>
-            <p className="text-xs text-orange tracking-[0.3em] uppercase font-medium mb-4">
+            <p className="text-sm text-orange tracking-[0.3em] uppercase font-medium mb-4">
               Who We Are
             </p>
             <h2 className="text-4xl lg:text-5xl font-bold text-(--fg) leading-tight">
