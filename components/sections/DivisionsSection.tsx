@@ -9,7 +9,7 @@ import { divisions } from "@/lib/divisions";
 
 const divisionImages: Record<string, string> = {
   "information-technology":
-    "/information.jpeg", 
+    "/Information.jpeg",
   "agricultural-business":
     "/agriculture.jpeg",
   "real-estate":
