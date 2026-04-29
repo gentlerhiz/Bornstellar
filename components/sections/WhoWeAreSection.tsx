@@ -15,7 +15,7 @@ const whoWeAreTabs = [
       "We design and deploy the systems that power modern African organisations — custom software, cloud architecture, cybersecurity and digital transformation strategies built for local realities.",
     cta: { label: "Explore Division", href: "/divisions/information-technology" },
     image:
-      "/africa2.jpeg",
+      "/Africa2.jpeg",
   },
   {
     id: 1,
