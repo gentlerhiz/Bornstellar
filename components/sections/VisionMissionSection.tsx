@@ -65,7 +65,7 @@ export default function VisionMissionSection() {
               {missionPoints.map((point, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
                   <div className="group flex items-start gap-6 py-7 hover:bg-white/[0.03] transition-colors duration-300 px-2">
-                    <p className="text-base sm:text-lg text-white/75 leading-8 group-hover:text-white transition-colors duration-300">
+                    <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] tracking-tight group-hover:text-white transition-colors duration-300">
                       {point}
                     </p>
                   </div>

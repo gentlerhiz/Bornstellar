@@ -36,7 +36,7 @@ export default function MissionSection() {
                   <span className="text-[10px] text-[#E8500A] tracking-[0.3em] font-semibold tabular-nums mt-1 shrink-0">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="text-base sm:text-lg text-white/75 leading-8 group-hover:text-white transition-colors duration-300">
+                  <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] tracking-tight group-hover:text-white transition-colors duration-300">
                     {point}
                   </p>
                 </div>
