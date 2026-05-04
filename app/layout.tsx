@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     "consulting",
   ],
   metadataBase: new URL("https://www.bornstellarltd.com"),
+  icons: {
+    icon: "/og.jpg",
+    shortcut: "/og.jpg",
+    apple: "/og.jpg",
+  },
   openGraph: {
     title: "Bornstellar Limited — Future-ready solutions for Africa's growth",
     description:
@@ -37,10 +42,10 @@ export const metadata: Metadata = {
     siteName: "Bornstellar Limited",
     images: [
       {
-        url: "/logotest.png",
+        url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Bornstellar Limited logo",
+        alt: "Bornstellar Limited share preview",
       },
     ],
     locale: "en_US",
@@ -51,7 +56,7 @@ export const metadata: Metadata = {
     title: "Bornstellar Limited — Future-ready solutions for Africa's growth",
     description:
       "Bornstellar is building the systems that power Africa's growth across technology, infrastructure, energy, and industry.",
-    images: ["/logotest.png"],
+    images: ["/og.jpg"],
   },
 };
 
