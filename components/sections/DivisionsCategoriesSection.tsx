@@ -38,6 +38,13 @@ const divisionImages: Record<string, string> = {
 export default function DivisionsCategoriesSection() {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
 
+  const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    const target = document.elementFromPoint(event.clientX, event.clientY);
+    const card = target?.closest("[data-division-slug]") as HTMLElement | null;
+    const slug = card?.dataset.divisionSlug ?? null;
+    setActiveSlug((current) => (slug && slug !== current ? slug : current));
+  };
+
   return (
     <section className="py-20 border-t border-(--border) bg-(--bg)">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -50,11 +57,15 @@ export default function DivisionsCategoriesSection() {
           </div>
         </FadeIn> */}
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr]">
+        <div
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr]"
+          onPointerMove={handlePointerMove}
+        >
           {divisions.map((division, i) => (
             <FadeIn key={division.slug} delay={i * 0.05}>
               <div
                 className="group relative block overflow-hidden bg-[#0e0d0c] border border-(--border) transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange/70"
+                data-division-slug={division.slug}
                 onMouseEnter={() => setActiveSlug(division.slug)}
                 onFocus={() => setActiveSlug(division.slug)}
                 onClick={() => setActiveSlug(division.slug)}
