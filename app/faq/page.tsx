@@ -12,7 +12,7 @@ export default function FaqPage() {
   return (
     <>
       <PageHero
-        overline="FAQ"
+        // overline="FAQ"
         title="Frequently asked questions."
         subtitle="Answers to the most common questions about Bornstellar, our divisions, partnerships, and careers."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "FAQ" }]}

@@ -16,7 +16,7 @@ export default function SustainabilityPage() {
   return (
     <>
       <PageHero
-        overline="Sustainability & Impact"
+        // overline="Sustainability & Impact"
         title="Responsibility as competitive advantage."
         subtitle="Bornstellar views sustainability not as a compliance obligation, but as a core driver of long-term value creation across all 12 divisions and every community we touch."
         breadcrumbs={[

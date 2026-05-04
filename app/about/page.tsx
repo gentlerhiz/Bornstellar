@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        overline="About Bornstellar"
+        // overline="About Bornstellar"
         title="Built for Africa's complexity."
         subtitle="Bornstellar Limited is a Nigeria-incorporated multi-division platform delivering end-to-end solutions across Africa's most critical sectors — from digital transformation and food systems to infrastructure, energy, and governance."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}

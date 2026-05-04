@@ -14,7 +14,7 @@ export default function GovernancePage() {
   return (
     <>
       <PageHero
-        overline="Leadership & Governance"
+        // overline="Leadership & Governance"
         title="Leadership Built on Integrity. Governance Anchored in Purpose."
         subtitle="Bornstellar Limited is led by a team of seasoned professionals with deep expertise across industry, finance, and operations. Our governance structure is designed to ensure accountability, strategic discipline, and sustainable value creation across all divisions and stakeholder relationships."
         breadcrumbs={[

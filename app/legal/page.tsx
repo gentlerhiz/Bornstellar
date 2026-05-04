@@ -14,7 +14,7 @@ export default function LegalPage() {
   return (
     <>
       <PageHero
-        overline="Legal & Compliance"
+        // overline="Legal & Compliance"
         title="Operating with full transparency and legal rigour."
         subtitle="Bornstellar Limited is fully incorporated and compliant under Nigerian corporate law. We uphold the highest standards of regulatory adherence across every division and jurisdiction we operate in."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Legal & Compliance" }]}

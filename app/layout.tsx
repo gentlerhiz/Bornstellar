@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Bornstellar Limited",
     images: [
       {
-        url: "/favicon.png",
+        url: "/logotest.png",
         alt: "Bornstellar Limited logo",
       },
     ],

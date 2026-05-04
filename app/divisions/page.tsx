@@ -13,7 +13,7 @@ export default function DivisionsPage() {
   return (
     <>
       <PageHero
-        overline="Our Divisions"
+        // overline="Our Divisions"
         title="Driving growth across Africa's most critical industries."
         subtitle="At Bornstellar, our divisions operate as focused business units with dedicated sector expertise, unified by shared strategy, governance, and a commitment to sustainable growth and value creation."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Divisions" }]}

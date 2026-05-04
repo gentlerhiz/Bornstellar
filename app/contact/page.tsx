@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        overline="Contact & Locations"
+        // overline="Contact & Locations"
         title="Let's build something together."
         subtitle="Whether you're a business, government institution, investor, development partner, or prospective team member — we want to hear from you."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}

@@ -89,7 +89,6 @@ export default function WhoWeAreSection() {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-
         {/* Section header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div className="max-w-3xl">
@@ -107,12 +106,13 @@ export default function WhoWeAreSection() {
             Our Full Story →
           </Link>
         </div>
+      </div>
 
-        {/* Single full-width image panel */}
+      {/* Single full-width image panel */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="border border-(--border)">
-
-          {/* Image panel — full width */}
-          <div className="relative overflow-hidden min-h-[420px] sm:min-h-[520px] lg:min-h-[580px] bg-[#0e0d0c]">
+          {/* Image panel */}
+          <div className="relative overflow-hidden min-h-[504px] sm:min-h-[520px] lg:min-h-[580px] bg-[#0e0d0c]">
             <AnimatePresence mode="sync">
               <motion.div
                 key={tab.id}
@@ -194,9 +194,7 @@ export default function WhoWeAreSection() {
               </div>
             </div>
 
-            
           </div>
-
         </div>
       </div>
     </section>

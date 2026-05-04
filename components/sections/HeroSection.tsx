@@ -152,7 +152,7 @@ export default function HeroSection() {
                         animate={{ y: 0 }}
                         exit={{ y: "-105%", opacity: 0 }}
                         transition={{ duration: 0.75, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                        className={`block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.02] tracking-tight ${
+                        className={`block text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight ${
                           i === 2 ? "text-orange" : "text-white"
                         }`}
                       >
@@ -170,7 +170,7 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-                  className="text-sm sm:text-base text-white/55 leading-relaxed max-w-lg mb-10"
+                  className="text-sm sm:text-base text-white/55 leading-relaxed max-w-lg mb-15"
                 >
                   {slide.sub}
                 </motion.p>

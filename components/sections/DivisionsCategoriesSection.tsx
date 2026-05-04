@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
@@ -33,24 +36,30 @@ const divisionImages: Record<string, string> = {
 };
 
 export default function DivisionsCategoriesSection() {
+  const [activeSlug, setActiveSlug] = useState<string | null>(null);
+
   return (
     <section className="py-20 border-t border-(--border) bg-(--bg)">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <FadeIn>
+        {/* <FadeIn>
           <div className="flex items-center gap-4 mb-10">
             <div className="w-8 h-px bg-orange" />
             <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold">
               Divisions
             </p>
           </div>
-        </FadeIn>
+        </FadeIn> */}
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr]">
           {divisions.map((division, i) => (
             <FadeIn key={division.slug} delay={i * 0.05}>
-              <Link
-                href={`/divisions/${division.slug}`}
+              <div
                 className="group relative block overflow-hidden bg-[#0e0d0c] border border-(--border) transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange/70"
+                onMouseEnter={() => setActiveSlug(division.slug)}
+                onFocus={() => setActiveSlug(division.slug)}
+                onClick={() => setActiveSlug(division.slug)}
+                tabIndex={0}
+                role="button"
               >
                 <div className="relative aspect-[4/3]">
                   <Image
@@ -60,17 +69,39 @@ export default function DivisionsCategoriesSection() {
                     }
                     alt={division.name}
                     fill
-                    className="object-cover opacity-85 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 group-hover:scale-[1.03] group-focus:scale-[1.03] group-active:scale-[1.03] transition-all duration-700"
+                    className={`object-cover transition-all duration-700 ${
+                      activeSlug === division.slug
+                        ? "opacity-100 scale-[1.03]"
+                        : "opacity-85"
+                    }`}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-[#0e0d0c]/70 via-[#0e0d0c]/30 to-transparent opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-500" />
+                  <div
+                    className={`pointer-events-none absolute inset-0 bg-orange/70 transition-opacity duration-500 ${
+                      activeSlug === division.slug ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
                 </div>
 
-                <div className="absolute bottom-6 left-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 text-[#0e0d0c] text-2xl font-semibold shadow-lg ring-1 ring-white/30 opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 group-hover:scale-100 group-focus:scale-100 group-active:scale-100">
-                  +
-                </div>
+                <Link
+                  href={`/divisions/${division.slug}`}
+                  className={`absolute bottom-6 left-9 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 text-[#0e0d0c] text-2xl font-semibold shadow-lg border border-white/70 transition-all duration-300 hover:scale-105 hover:shadow-orange/40 focus-visible:scale-105 before:absolute before:-inset-3 before:rounded-full before:border before:border-white/50 before:transition-all before:duration-300 before:content-[''] hover:before:scale-105 hover:before:border-white/80 focus-visible:before:scale-105 focus-visible:before:border-white/80 ${
+                    activeSlug === division.slug
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-95"
+                  }`}
+                  aria-label={`Open ${division.name}`}
+                >
+                  <span aria-hidden="true">+</span>
+                </Link>
 
-                <div className="absolute inset-0 flex flex-col justify-end p-6 pb-20 opacity-0 translate-y-4 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 group-hover:translate-y-0 group-focus:translate-y-0 group-active:translate-y-0 transition-all duration-500">
+                <div
+                  className={`pointer-events-none absolute inset-0 flex flex-col justify-end p-6 pb-24 transition-all duration-500 ${
+                    activeSlug === division.slug
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                >
                   <h3 className="text-xl font-semibold text-white leading-snug">
                     {division.name}
                   </h3>
@@ -83,7 +114,7 @@ export default function DivisionsCategoriesSection() {
                     {division.tagline}
                   </p>
                 </div>
-              </Link>
+              </div>
             </FadeIn>
           ))}
         </div>

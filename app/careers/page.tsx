@@ -15,7 +15,7 @@ export default function CareersPage() {
   return (
     <>
       <PageHero
-        overline="Careers"
+        // overline="Careers"
         title="Build Africa's future. Build yours."
         subtitle="Bornstellar offers high-calibre professionals the opportunity to build impactful careers across multiple sectors while remaining on the African continent — where the opportunity is largest."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Careers" }]}
