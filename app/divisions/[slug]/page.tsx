@@ -12,11 +12,11 @@ const divisionImages: Record<string, string> = {
   "agricultural-business":
     "/agriculture.jpeg",
   "real-estate":
-    "https://images.unsplash.com/photo-1700469919563-ef267d459da5?w=1400&q=85&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1685266325553-56094896ce47?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "machinery-manufacturing":
-    "https://images.unsplash.com/photo-1764114903065-4cc137dd303b?w=1400&q=85&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?q=80&w=1225&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "construction-infrastructure":
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop",
+    "/construction.jpeg",
   "general-trading":
     "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1400&q=85&auto=format&fit=crop",
   "oil-gas-services":

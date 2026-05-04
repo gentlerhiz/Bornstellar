@@ -43,7 +43,7 @@ const whoWeAreTabs = [
       "Real estate, construction, machinery and automotive — our built-environment divisions lay the structures, roads, and mobility systems that connect people, industries, and opportunity.",
     cta: { label: "Explore Division", href: "/divisions/construction-infrastructure" },
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=90&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -115,7 +115,7 @@ export default function WhoWeAreSection() {
         <div className="border border-(--border)">
 
           {/* Image panel — full width */}
-          <div className="relative overflow-hidden min-h-[520px] lg:min-h-[580px] bg-[#0e0d0c]">
+          <div className="relative overflow-hidden min-h-[420px] sm:min-h-[520px] lg:min-h-[580px] bg-[#0e0d0c]">
             <AnimatePresence mode="sync">
               <motion.div
                 key={tab.id}
@@ -137,8 +137,8 @@ export default function WhoWeAreSection() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Caption overlay — bottom left */}
-            <div className="absolute bottom-0 left-0 right-0 z-10 p-8 lg:p-12">
+            {/* Caption overlay — bottom left. Tab indicators moved inside for better mobile layout */}
+            <div className="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8 lg:p-12 relative lg:top-[75%] lg:bottom-auto lg:translate-y-[200px]">
               <div className="max-w-2xl">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -148,49 +148,78 @@ export default function WhoWeAreSection() {
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug mb-4">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug mb-3 sm:mb-4">
                       {tab.headline}
                     </h3>
-                    <p className="text-sm text-white/60 leading-7 mb-6 max-w-lg">
+                    <p className="text-sm sm:text-base text-white/70 leading-7 mb-4 sm:mb-6 max-w-lg">
                       {tab.description}
                     </p>
                     <Link
                       href={tab.cta.href}
-                      className="inline-flex items-center gap-2 h-10 px-6 bg-orange text-white text-xs font-semibold tracking-[0.15em] uppercase hover:bg-orange-hover transition-colors duration-300"
+                      className="inline-flex items-center gap-2 h-10 px-5 sm:px-6 bg-orange text-white text-xs sm:text-sm font-semibold tracking-[0.12em] uppercase hover:bg-orange-hover transition-colors duration-300"
                     >
                       {tab.cta.label} →
                     </Link>
+
+                    {/* Tab indicators — placed inside caption to avoid overlap on narrow screens (hidden on lg) */}
+                    <div className="mt-4 sm:mt-6 flex flex-wrap gap-3 items-center justify-start sm:justify-end lg:hidden">
+                      {whoWeAreTabs.map((t, i) => (
+                        <button
+                          key={t.id}
+                          type="button"
+                          aria-label={`Go to ${t.tab}`}
+                          onClick={() => goTo(i)}
+                          className="flex flex-col sm:items-end items-start gap-1.5 group"
+                        >
+                          <span className={`text-xs sm:text-[10px] font-semibold tracking-[0.12em] transition-colors duration-300 ${
+                            i === current ? "text-orange" : "text-white/40 group-hover:text-white/70"
+                          }`}>
+                            {t.tab}
+                          </span>
+                          <div className="relative h-0.5 bg-white/20 w-14 sm:w-12">
+                            {i === current && (
+                              <motion.div
+                                className="absolute top-0 left-0 h-full bg-orange"
+                                style={{ width: `${progress}%` }}
+                              />
+                            )}
+                          </div>
+                        </button>
+                      ))}
+                    </div>
                   </motion.div>
                 </AnimatePresence>
               </div>
+
+              {/* Right-side vertical tab indicators for large screens — positioned relative to caption */}
+              <div className="hidden lg:flex absolute top-1/2 right-6 lg:right-12 transform -translate-y-1/2 z-10 flex-col items-end gap-4">
+                {whoWeAreTabs.map((t, i) => (
+                  <button
+                    key={t.id}
+                    type="button"
+                    aria-label={`Go to ${t.tab}`}
+                    onClick={() => goTo(i)}
+                    className="flex flex-col items-end gap-1.5 group"
+                  >
+                    <span className={`text-sm font-semibold tracking-[0.12em] transition-colors duration-300 ${
+                      i === current ? "text-orange" : "text-white/30 group-hover:text-white/60"
+                    }`}>
+                      {t.tab}
+                    </span>
+                    <div className="relative h-0.5 w-24 bg-white/20">
+                      {i === current && (
+                        <motion.div
+                          className="absolute top-0 left-0 h-full bg-orange"
+                          style={{ width: `${progress}%` }}
+                        />
+                      )}
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
 
-            {/* Tab indicators — bottom right */}
-            <div className="absolute bottom-8 right-8 lg:bottom-12 lg:right-12 z-10 flex items-center gap-3">
-              {whoWeAreTabs.map((t, i) => (
-                <button
-                  key={t.id}
-                  type="button"
-                  aria-label={`Go to ${t.tab}`}
-                  onClick={() => goTo(i)}
-                  className="flex flex-col items-end gap-1.5 group"
-                >
-                  <span className={`text-[10px] font-semibold tracking-[0.2em] transition-colors duration-300 ${
-                    i === current ? "text-orange" : "text-white/30 group-hover:text-white/60"
-                  }`}>
-                    {t.tab}
-                  </span>
-                  <div className="relative h-0.5 w-12 bg-white/20">
-                    {i === current && (
-                      <motion.div
-                        className="absolute top-0 left-0 h-full bg-orange"
-                        style={{ width: `${progress}%` }}
-                      />
-                    )}
-                  </div>
-                </button>
-              ))}
-            </div>
+            
           </div>
 
         </div>
