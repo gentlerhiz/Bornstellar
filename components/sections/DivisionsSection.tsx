@@ -113,10 +113,8 @@ export default function DivisionsSection() {
               <p className="text-sm text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-4">
                 Our Divisions
               </p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[var(--fg)] leading-tight ">
-                Our divisions span the industries that power real economic growth
-              </h2>
-              <p className="mt-3 text-sm text-[var(--fg-muted)] leading-7 ">
+              
+              <p className="text-lg text-black leading-8 max-w-2xl font-normal ">
                 From technology and agriculture to energy, infrastructure, and beyond. Each one is built to deliver practical solutions, executed with precision and scale across Africa.
               </p>
             </div>

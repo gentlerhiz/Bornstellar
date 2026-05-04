@@ -69,8 +69,8 @@ export default async function DivisionDetailPage({
   const otherDivisions = divisions.filter((d) => d.slug !== slug).slice(0, 4);
 
   const heroOverline = division.businessName
-    ? `${division.icon} ${division.name} · ${division.businessName}`
-    : `${division.icon} ${division.name}`;
+    ? `${division.icon} ${division.businessName}`
+    : undefined;
 
   return (
     <>

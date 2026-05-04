@@ -96,7 +96,7 @@ export default function WhoWeAreSection() {
             <p className="text-sm text-orange tracking-[0.3em] uppercase font-medium mb-4">
               Who We Are
             </p>
-            <p className="text-lg text-black leading-8 max-w-2xl font-semibold">
+            <p className="text-lg text-black leading-8 max-w-2xl font-normal">
               As a diversified conglomerate with operations across Africa&apos;s most critical sectors, our reach across multiple industries reflects our commitment to delivering solutions that meet fundamental needs.
             </p>
           </div>

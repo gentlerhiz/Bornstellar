@@ -50,7 +50,7 @@ export default function DivisionsCategoriesSection() {
             <FadeIn key={division.slug} delay={i * 0.05}>
               <Link
                 href={`/divisions/${division.slug}`}
-                className="group relative block overflow-hidden bg-[#0e0d0c] border border-(--border) transition-all duration-300"
+                className="group relative block overflow-hidden bg-[#0e0d0c] border border-(--border) transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange/70"
               >
                 <div className="relative aspect-[4/3]">
                   <Image
@@ -60,17 +60,17 @@ export default function DivisionsCategoriesSection() {
                     }
                     alt={division.name}
                     fill
-                    className="object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
+                    className="object-cover opacity-85 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 group-hover:scale-[1.03] group-focus:scale-[1.03] group-active:scale-[1.03] transition-all duration-700"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-[#0e0d0c]/70 via-[#0e0d0c]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0e0d0c]/70 via-[#0e0d0c]/30 to-transparent opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                <div className="absolute bottom-6 left-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 text-[#0e0d0c] text-2xl font-semibold shadow-lg ring-1 ring-white/30 opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">
+                <div className="absolute bottom-6 left-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 text-[#0e0d0c] text-2xl font-semibold shadow-lg ring-1 ring-white/30 opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 group-hover:scale-100 group-focus:scale-100 group-active:scale-100">
                   +
                 </div>
 
-                <div className="absolute inset-0 flex flex-col justify-end p-6 pb-20 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                <div className="absolute inset-0 flex flex-col justify-end p-6 pb-20 opacity-0 translate-y-4 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 group-hover:translate-y-0 group-focus:translate-y-0 group-active:translate-y-0 transition-all duration-500">
                   <h3 className="text-xl font-semibold text-white leading-snug">
                     {division.name}
                   </h3>
