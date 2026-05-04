@@ -35,18 +35,6 @@ const values = [
     description:
       "We build for the long term. Our projects are designed to remain economically viable, environmentally responsible, and socially beneficial for generations.",
   },
-  {
-    number: "06",
-    title: "Collaboration",
-    description:
-      "We believe Africa's growth is a collective effort. We partner with governments, institutions, communities, and private stakeholders to deliver outcomes no single entity can achieve alone.",
-  },
-  {
-    number: "07",
-    title: "Local Pride",
-    description:
-      "We champion African talent, African resources, and African solutions — reducing dependency on imports and keeping economic value where it belongs: on the continent.",
-  },
 ];
 
 export default function ValuesSection() {
@@ -116,25 +104,6 @@ export default function ValuesSection() {
             );
           })}
 
-          {/* 6th cell — Africa focus */}
-          <FadeIn delay={0.45}>
-            <div className="bg-[#0e0d0c] border border-[#2a2926] rounded-sm p-8 flex flex-col justify-between h-full min-h-65 group">
-              <p className="text-xs text-orange tracking-[0.25em] uppercase font-medium">
-                African-first
-              </p>
-              <div>
-                <p className="text-2xl font-bold text-white leading-snug mb-4">
-                  Built for Africa.<br />Starting from Nigeria.
-                </p>
-                <Link
-                  href="/about#africa-focus"
-                  className="text-xs text-white/50 hover:text-orange transition-colors tracking-[0.15em] uppercase font-medium"
-                >
-                  Our Africa Focus →
-                </Link>
-              </div>
-            </div>
-          </FadeIn>
         </div>
 
         

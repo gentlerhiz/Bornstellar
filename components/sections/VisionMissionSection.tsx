@@ -3,7 +3,7 @@
 import FadeIn from "@/components/FadeIn";
 
 const missionPoints = [
-  "To conceptualize, finance, and execute integrated solutions across Africa's critical sectors by combining technology, capital, and local expertise — reducing dependency on imports, creating sustainable livelihoods, and driving measurable economic growth from the ground up.",
+  "To finance and deliver integrated solutions across Africa's critical sectors, combining technology, capital, and local expertise to create sustainable growth.",
 ];
 
 export default function VisionMissionSection() {
@@ -34,8 +34,8 @@ export default function VisionMissionSection() {
 
               {/* Right — vision statement */}
               <div>
-                <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] tracking-tight">
-                  To be Africa's leading integrated conglomerate — building industries, empowering communities, and delivering solutions that transform lives across the continent.
+                <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-normal text-white leading-[1.22] tracking-tight">
+                  Africa's leading integrated conglomerate, building industries and solutions that expand opportunity across the continent.
                 </p>
               </div>
 
@@ -65,7 +65,7 @@ export default function VisionMissionSection() {
               {missionPoints.map((point, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
                   <div className="group flex items-start gap-6 py-7 hover:bg-white/[0.03] transition-colors duration-300 px-2">
-                    <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] tracking-tight group-hover:text-white transition-colors duration-300">
+                    <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-normal text-white leading-[1.22] tracking-tight group-hover:text-white transition-colors duration-300">
                       {point}
                     </p>
                   </div>

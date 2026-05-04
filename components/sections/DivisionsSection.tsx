@@ -37,38 +37,41 @@ const divisionImages: Record<string, string> = {
 };
 
 const divisionCategories = [
-  { label: "All", slugs: divisions.map((d) => d.slug) },
-  { label: "Technology", slugs: ["information-technology", "research-development"] },
-  { label: "Agriculture", slugs: ["agricultural-business"] },
+  { label: "ALL", slugs: divisions.map((d) => d.slug) },
   {
-    label: "Built Environment",
-    slugs: [
-      "real-estate",
-      "machinery-manufacturing",
-      "construction-infrastructure",
-      "automotive",
-    ],
+    label: "Media",
+    slugs: ["media-digital-management"],
   },
   {
-    label: "Energy",
-    slugs: ["oil-gas-services", "renewable-energy"],
-  },
-  {
-    label: "Advisory",
+    label: "Information Technology Services",
     slugs: [
-      "general-trading",
+      "information-technology",
+      "research-development",
       "business-consulting",
       "forensic-financial-services",
     ],
   },
   {
-    label: "Media",
-    slugs: ["media-digital-management"],
+    label: "Agriculture",
+    slugs: ["agricultural-business", "general-trading"],
+  },
+  {
+    label: "Real Estate",
+    slugs: ["real-estate", "construction-infrastructure"],
+  },
+  {
+    label: "Machinery & Equipment Manufacturing",
+    slugs: [
+      "machinery-manufacturing",
+      "automotive",
+      "oil-gas-services",
+      "renewable-energy",
+    ],
   },
 ];
 
 export default function DivisionsSection() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("ALL");
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -154,7 +157,7 @@ export default function DivisionsSection() {
                 }`}
               >
                 {cat.label}
-                {cat.label !== "All" && (
+                {cat.label !== "ALL" && (
                   <span className="ml-1.5 opacity-60">
                     {cat.slugs.length}
                   </span>

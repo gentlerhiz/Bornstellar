@@ -96,10 +96,7 @@ export default function WhoWeAreSection() {
             <p className="text-sm text-orange tracking-[0.3em] uppercase font-medium mb-4">
               Who We Are
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-(--fg) leading-snug mb-4">
-              Built for Africa&apos;s complexity.
-            </h2>
-            <p className="text-base text-(--fg-muted) leading-8 max-w-2xl">
+            <p className="text-lg text-black leading-8 max-w-2xl font-semibold">
               As a diversified conglomerate with operations across Africa&apos;s most critical sectors, our reach across multiple industries reflects our commitment to delivering solutions that meet fundamental needs.
             </p>
           </div>
@@ -171,19 +168,8 @@ export default function WhoWeAreSection() {
                           onClick={() => goTo(i)}
                           className="flex flex-col sm:items-end items-start gap-1.5 group"
                         >
-                          <span className={`text-xs sm:text-[10px] font-semibold tracking-[0.12em] transition-colors duration-300 ${
-                            i === current ? "text-orange" : "text-white/40 group-hover:text-white/70"
-                          }`}>
-                            {t.tab}
-                          </span>
-                          <div className="relative h-0.5 bg-white/20 w-14 sm:w-12">
-                            {i === current && (
-                              <motion.div
-                                className="absolute top-0 left-0 h-full bg-orange"
-                                style={{ width: `${progress}%` }}
-                              />
-                            )}
-                          </div>
+                          <span className="sr-only">{t.tab}</span>
+                          <div className="sr-only">{i === current ? "Active" : "Inactive"}</div>
                         </button>
                       ))}
                     </div>
@@ -201,19 +187,8 @@ export default function WhoWeAreSection() {
                     onClick={() => goTo(i)}
                     className="flex flex-col items-end gap-1.5 group"
                   >
-                    <span className={`text-sm font-semibold tracking-[0.12em] transition-colors duration-300 ${
-                      i === current ? "text-orange" : "text-white/30 group-hover:text-white/60"
-                    }`}>
-                      {t.tab}
-                    </span>
-                    <div className="relative h-0.5 w-24 bg-white/20">
-                      {i === current && (
-                        <motion.div
-                          className="absolute top-0 left-0 h-full bg-orange"
-                          style={{ width: `${progress}%` }}
-                        />
-                      )}
-                    </div>
+                    <span className="sr-only">{t.tab}</span>
+                    <div className="sr-only">{i === current ? "Active" : "Inactive"}</div>
                   </button>
                 ))}
               </div>

@@ -1,7 +1,6 @@
 ﻿import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CtaSection from "@/components/sections/CtaSection";
-import DivisionsStatsSection from "@/components/sections/DivisionsStatsSection";
 import DivisionsCategoriesSection from "@/components/sections/DivisionsCategoriesSection";
 
 export const metadata: Metadata = {
@@ -15,12 +14,11 @@ export default function DivisionsPage() {
     <>
       <PageHero
         overline="Our Divisions"
-        title="Thirteen divisions. One integrated strategy."
-        subtitle="Each division operates as a focused business unit with dedicated sector expertise, unified under Bornstellar's overarching strategy, shared services, and governance framework."
+        title="Driving growth across Africa's most critical industries."
+        subtitle="At Bornstellar, our divisions operate as focused business units with dedicated sector expertise, unified by shared strategy, governance, and a commitment to sustainable growth and value creation."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Divisions" }]}
         bgImage="/africa1.jpeg"
       />
-      <DivisionsStatsSection />
       <DivisionsCategoriesSection />
       <CtaSection />
     </>

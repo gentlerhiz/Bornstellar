@@ -30,7 +30,7 @@ export default function AboutPage() {
       <VisionMissionSection />
       <ValuesSection />
       
-      <AfricaFocusSection />
+      {/* <AfricaFocusSection /> */}
       
       <QuickFactsSection />
       {/* <StatsSection /> */}

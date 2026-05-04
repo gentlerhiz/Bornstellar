@@ -5,28 +5,40 @@ import FadeIn from "@/components/FadeIn";
 
 const goals = [
   {
-    title: "Drive Industrialization and Local Production",
+    title: "Agricultural Productivity & Food Security",
     description:
-      "Build and scale local manufacturing and production capacity to reduce import dependence, strengthen value chains, and retain economic value within Africa.",
-    img: "https://images.unsplash.com/photo-1764114903065-4cc137dd303b?w=800&q=85&auto=format&fit=crop",
+      "Scaling commercial farming, agri-input supply, and cold-chain logistics to feed Africa's growing population and capture export markets.",
+    img: "/agriculture2.jpeg",
   },
   {
-    title: "Deliver Integrated, Technology-Enabled Solutions",
+    title: "Digital Transformation & Knowledge Industries",
     description:
-      "Leverage technology, capital, and execution expertise to solve critical challenges across sectors such as agriculture, infrastructure, energy, and services.",
-    img: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=85&auto=format&fit=crop",
+      "Delivering the IT systems, platforms, and talent that power modern African institutions and digital economies.",
+    img: "/Information.jpeg",
   },
   {
-    title: "Create Jobs and Develop Human Capital",
+    title: "Housing, Urbanisation & Core Infrastructure",
     description:
-      "Generate sustainable employment opportunities while investing in skills development to empower a productive and competitive African workforce.",
-    img: "/agriculture.jpeg",
+      "Building the real estate, roads, bridges, and facilities that underpin Africa's rapid urbanisation and economic growth.",
+    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=85&auto=format&fit=crop",
   },
   {
-    title: "Foster Sustainable Economic Growth and Partnerships",
+    title: "Local Manufacturing & Industrial Capacity",
     description:
-      "Collaborate with governments, private sector actors, and development institutions to deliver projects that drive long-term economic resilience and improve living standards.",
-    img: "https://images.unsplash.com/photo-1573164574511-73c773193279?w=800&q=85&auto=format&fit=crop",
+      "Manufacturing context-appropriate machinery and automotive solutions that reduce import dependence and create lasting industrial jobs.",
+    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=85&auto=format&fit=crop",
+  },
+  {
+    title: "Energy Security & Transition",
+    description:
+      "Deploying solar, hybrid, and off-grid systems alongside oil & gas support services for a pragmatic and just energy transition.",
+    img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=85&auto=format&fit=crop",
+  },
+  {
+    title: "Governance, Transparency & Financial Integrity",
+    description:
+      "Providing forensic, consulting, and advisory services that build investor confidence and strengthen African institutions.",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=85&auto=format&fit=crop",
   },
 ];
 
@@ -49,12 +61,12 @@ export default function GoalsSection() {
             </div>
             <p className="text-sm text-[var(--fg-muted)] leading-8 max-w-sm lg:text-right">
               Every division, every project, and every partnership is oriented
-              around these four long-term commitments to the continent.
+              around these six long-term commitments to the continent.
             </p>
           </div>
         </FadeIn>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {goals.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.07}>
               <div className="group relative overflow-hidden rounded-sm aspect-[4/3] bg-[#0e0d0c]">

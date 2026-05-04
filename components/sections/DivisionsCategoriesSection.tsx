@@ -32,89 +32,62 @@ const divisionImages: Record<string, string> = {
     "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=900&q=85&auto=format&fit=crop",
 };
 
-const categories = [
-  { label: "Technology & Digital", slugs: ["information-technology", "research-development"] },
-  { label: "Food & Agriculture", slugs: ["agricultural-business"] },
-  {
-    label: "Built Environment",
-    slugs: ["real-estate", "construction-infrastructure", "machinery-manufacturing", "automotive"],
-  },
-  { label: "Energy & Resources", slugs: ["renewable-energy", "oil-gas-services"] },
-  {
-    label: "Capital & Advisory",
-    slugs: ["business-consulting", "forensic-financial-services", "general-trading"],
-  },
-  { label: "Media & Communications", slugs: ["media-digital-management"] },
-];
-
 export default function DivisionsCategoriesSection() {
   return (
-    <>
-      {categories.map((cat, ci) => {
-        const catDivisions = divisions.filter((d) => cat.slugs.includes(d.slug));
-        return (
-          <section
-            key={cat.label}
-            className={`py-20 border-t border-(--border) ${
-              ci % 2 === 0 ? "bg-(--bg)" : "bg-(--bg-alt)"
-            }`}
-          >
-            <div className="max-w-7xl mx-auto px-6 lg:px-10">
-              <FadeIn>
-                <div className="flex items-center gap-4 mb-10">
-                  <div className="w-8 h-px bg-orange" />
-                  <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold">
-                    {cat.label}
+    <section className="py-20 border-t border-(--border) bg-(--bg)">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <FadeIn>
+          <div className="flex items-center gap-4 mb-10">
+            <div className="w-8 h-px bg-orange" />
+            <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold">
+              Divisions
+            </p>
+          </div>
+        </FadeIn>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr]">
+          {divisions.map((division, i) => (
+            <FadeIn key={division.slug} delay={i * 0.05}>
+              <Link
+                href={`/divisions/${division.slug}`}
+                className="group relative block overflow-hidden bg-[#0e0d0c] border border-(--border) transition-all duration-300"
+              >
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={
+                      divisionImages[division.slug] ??
+                      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=85&auto=format&fit=crop"
+                    }
+                    alt={division.name}
+                    fill
+                    className="object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0e0d0c]/70 via-[#0e0d0c]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+
+                <div className="absolute bottom-6 left-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 text-[#0e0d0c] text-2xl font-semibold shadow-lg ring-1 ring-white/30 opacity-0 scale-95 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">
+                  +
+                </div>
+
+                <div className="absolute inset-0 flex flex-col justify-end p-6 pb-20 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                  <h3 className="text-xl font-semibold text-white leading-snug">
+                    {division.name}
+                  </h3>
+                  {division.slug === "media-digital-management" && (
+                    <p className="mt-1 text-[11px] text-white/70 tracking-[0.12em] uppercase font-semibold">
+                      Operating as: Zenith Multipurposes
+                    </p>
+                  )}
+                  <p className="mt-3 text-sm text-white/80 leading-6 line-clamp-3">
+                    {division.tagline}
                   </p>
                 </div>
-              </FadeIn>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                {catDivisions.map((division, i) => (
-                  <FadeIn key={division.slug} delay={i * 0.07}>
-                    <Link
-                      href={`/divisions/${division.slug}`}
-                      className="group relative flex flex-col overflow-hidden border border-(--border) hover:border-orange/40 bg-(--bg-card) transition-all duration-300 rounded-sm"
-                    >
-                      <div className="relative aspect-video overflow-hidden bg-[#0e0d0c]">
-                        <Image
-                          src={
-                            divisionImages[division.slug] ??
-                            "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=85&auto=format&fit=crop"
-                          }
-                          alt={division.name}
-                          fill
-                          className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        />
-                        <div className="absolute inset-0 bg-linear-to-t from-[#0e0d0c]/60 to-transparent" />
-                        <div className="absolute top-4 left-4 text-[10px] text-orange tracking-[0.3em] font-bold tabular-nums">
-                          {String(division.id).padStart(2, "0")}
-                        </div>
-                      </div>
-                      <div className="flex flex-col flex-1 p-5 gap-3">
-                        <h3 className="text-sm font-bold text-(--fg) leading-snug group-hover:text-orange transition-colors duration-200">
-                          {division.name}
-                        </h3>
-                        {division.slug === "media-digital-management" && (
-                          <p className="text-[10px] text-(--fg-faint) tracking-[0.1em] uppercase font-medium">
-                            Zenith Multipurposes
-                          </p>
-                        )}
-                        <div className="flex items-center gap-2 text-[10px] text-orange tracking-[0.15em] uppercase font-semibold pt-2 border-t border-(--border) mt-auto">
-                          Learn more
-                          <span className="group-hover:translate-x-1 transition-transform duration-200">
-                            →
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </FadeIn>
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      })}
-    </>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
