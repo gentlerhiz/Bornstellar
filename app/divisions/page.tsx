@@ -7,7 +7,7 @@ import DivisionsCategoriesSection from "@/components/sections/DivisionsCategorie
 export const metadata: Metadata = {
   title: "Our Divisions — Bornstellar Limited",
   description:
-    "Bornstellar operates through 12 specialised divisions, each with clear sector focus and technical capabilities, integrated under a unified strategy.",
+    "Bornstellar operates through 13 specialised divisions, each with clear sector focus and technical capabilities, integrated under a unified strategy.",
 };
 
 export default function DivisionsPage() {
@@ -15,9 +15,10 @@ export default function DivisionsPage() {
     <>
       <PageHero
         overline="Our Divisions"
-        title="Twelve divisions. One integrated strategy."
+        title="Thirteen divisions. One integrated strategy."
         subtitle="Each division operates as a focused business unit with dedicated sector expertise, unified under Bornstellar's overarching strategy, shared services, and governance framework."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Divisions" }]}
+        bgImage="/africa1.jpeg"
       />
       <DivisionsStatsSection />
       <DivisionsCategoriesSection />

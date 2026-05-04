@@ -29,10 +29,12 @@ export default function AboutPage() {
       <GoalsSection />
       <VisionMissionSection />
       <ValuesSection />
-      <QuickFactsSection />
+      
       <AfricaFocusSection />
+      
+      <QuickFactsSection />
       {/* <StatsSection /> */}
-      <LeadershipQuoteSection />
+      {/* <LeadershipQuoteSection /> */}
       <CtaSection />
     </>
   );

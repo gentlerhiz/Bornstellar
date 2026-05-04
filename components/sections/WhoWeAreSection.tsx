@@ -8,18 +8,15 @@ import { motion, AnimatePresence } from "framer-motion";
 const whoWeAreTabs = [
   {
     id: 0,
-    number: "01",
     tab: "Technology & Digital",
     headline: "Building Africa's digital backbone, institution by institution.",
     description:
       "We design and deploy the systems that power modern African organisations — custom software, cloud architecture, cybersecurity and digital transformation strategies built for local realities.",
     cta: { label: "Explore Division", href: "/divisions/information-technology" },
-    image:
-      "/Africa2.jpeg",
+    image: "/Africa2.jpeg",
   },
   {
     id: 1,
-    number: "02",
     tab: "Energy & Resources",
     headline: "Powering Africa's future — cleanly, reliably, now.",
     description:
@@ -30,7 +27,6 @@ const whoWeAreTabs = [
   },
   {
     id: 2,
-    number: "03",
     tab: "Food & Agriculture",
     headline: "From the farm to the market — feeding Africa's ambition.",
     description:
@@ -41,14 +37,13 @@ const whoWeAreTabs = [
   },
   {
     id: 3,
-    number: "04",
     tab: "Built Environment",
     headline: "The physical foundations of Africa's economic transformation.",
     description:
       "Real estate, construction, machinery and automotive — our built-environment divisions lay the structures, roads, and mobility systems that connect people, industries, and opportunity.",
     cta: { label: "Explore Division", href: "/divisions/construction-infrastructure" },
     image:
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=90&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=90&auto=format&fit=crop",
   },
 ];
 
@@ -97,13 +92,16 @@ export default function WhoWeAreSection() {
 
         {/* Section header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
-          <div>
+          <div className="max-w-3xl">
             <p className="text-sm text-orange tracking-[0.3em] uppercase font-medium mb-4">
               Who We Are
             </p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-(--fg) leading-tight">
+            <h2 className="text-3xl lg:text-4xl font-bold text-(--fg) leading-snug mb-4">
               Built for Africa&apos;s complexity.
             </h2>
+            <p className="text-base text-(--fg-muted) leading-8 max-w-2xl">
+              As a diversified conglomerate with operations across Africa&apos;s most critical sectors, our reach across multiple industries reflects our commitment to delivering solutions that meet fundamental needs.
+            </p>
           </div>
           <Link
             href="/about"
@@ -113,11 +111,11 @@ export default function WhoWeAreSection() {
           </Link>
         </div>
 
-        {/* Two-panel layout */}
-        <div className="grid lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_480px] gap-0 border border-(--border)">
+        {/* Single full-width image panel */}
+        <div className="border border-(--border)">
 
-          {/* Left — image panel */}
-          <div className="relative overflow-hidden min-h-105 lg:min-h-140 bg-[#0e0d0c]">
+          {/* Image panel — full width */}
+          <div className="relative overflow-hidden min-h-[520px] lg:min-h-[580px] bg-[#0e0d0c]">
             <AnimatePresence mode="sync">
               <motion.div
                 key={tab.id}
@@ -132,112 +130,66 @@ export default function WhoWeAreSection() {
                   alt={tab.tab}
                   fill
                   className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 65vw"
+                  sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#0e0d0c]/80 via-[#0e0d0c]/20 to-transparent" />
                 <div className="absolute inset-0 bg-linear-to-r from-transparent to-[#0e0d0c]/30" />
               </motion.div>
             </AnimatePresence>
 
-            {/* Caption overlay — bottom of image */}
-            <div className="absolute bottom-0 left-0 right-0 z-10 p-8 lg:p-10">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`caption-${tab.id}`}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug mb-4 max-w-lg">
-                    {tab.headline}
-                  </h3>
-                  <p className="text-sm text-white/60 leading-7 max-w-md mb-6">
-                    {tab.description}
-                  </p>
-                  <Link
-                    href={tab.cta.href}
-                    className="inline-flex items-center gap-2 h-10 px-6 bg-orange text-white text-xs font-semibold tracking-[0.15em] uppercase hover:bg-orange-hover transition-colors duration-300"
+            {/* Caption overlay — bottom left */}
+            <div className="absolute bottom-0 left-0 right-0 z-10 p-8 lg:p-12">
+              <div className="max-w-2xl">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`caption-${tab.id}`}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    {tab.cta.label} →
-                  </Link>
-                </motion.div>
-              </AnimatePresence>
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug mb-4">
+                      {tab.headline}
+                    </h3>
+                    <p className="text-sm text-white/60 leading-7 mb-6 max-w-lg">
+                      {tab.description}
+                    </p>
+                    <Link
+                      href={tab.cta.href}
+                      className="inline-flex items-center gap-2 h-10 px-6 bg-orange text-white text-xs font-semibold tracking-[0.15em] uppercase hover:bg-orange-hover transition-colors duration-300"
+                    >
+                      {tab.cta.label} →
+                    </Link>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
-          </div>
 
-          {/* Right — tab stack */}
-          <div className="flex flex-col divide-y divide-(--border) border-l border-(--border) bg-(--bg)">
-            {whoWeAreTabs.map((t, i) => {
-              const isActive = i === current;
-              return (
+            {/* Tab indicators — bottom right */}
+            <div className="absolute bottom-8 right-8 lg:bottom-12 lg:right-12 z-10 flex items-center gap-3">
+              {whoWeAreTabs.map((t, i) => (
                 <button
                   key={t.id}
                   type="button"
-                  aria-label={`View ${t.tab}`}
+                  aria-label={`Go to ${t.tab}`}
                   onClick={() => goTo(i)}
-                  className={`group relative flex flex-col text-left px-8 py-7 transition-colors duration-300 ${
-                    isActive ? "bg-[#0e0d0c]" : "hover:bg-(--bg-alt)"
-                  }`}
+                  className="flex flex-col items-end gap-1.5 group"
                 >
-                  {/* Progress bar — left edge */}
-                  <div className="absolute left-0 top-0 bottom-0 w-0.75 bg-(--border)">
-                    {isActive && (
-                      <motion.div
-                        className="absolute top-0 left-0 right-0 bg-orange"
-                        style={{ height: `${progress}%` }}
-                      />
-                    )}
-                  </div>
-
-                  <div className="flex items-center justify-between mb-1">
-                    <span className={`text-[10px] tracking-[0.3em] font-semibold transition-colors duration-300 ${
-                      isActive ? "text-orange" : "text-(--fg-faint) group-hover:text-orange/60"
-                    }`}>
-                      {t.number}
-                    </span>
-                    {isActive && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange" />
-                    )}
-                  </div>
-
-                  <span className={`text-base font-semibold leading-snug transition-colors duration-300 ${
-                    isActive ? "text-white" : "text-(--fg) group-hover:text-(--fg)"
+                  <span className={`text-[10px] font-semibold tracking-[0.2em] transition-colors duration-300 ${
+                    i === current ? "text-orange" : "text-white/30 group-hover:text-white/60"
                   }`}>
                     {t.tab}
                   </span>
-
-                  {isActive && (
-                    <motion.p
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      className="text-xs text-white/50 mt-2 leading-6"
-                    >
-                      {t.headline}
-                    </motion.p>
-                  )}
+                  <div className="relative h-0.5 w-12 bg-white/20">
+                    {i === current && (
+                      <motion.div
+                        className="absolute top-0 left-0 h-full bg-orange"
+                        style={{ width: `${progress}%` }}
+                      />
+                    )}
+                  </div>
                 </button>
-              );
-            })}
-
-            {/* Bottom — counter + nav */}
-            <div className="mt-auto px-8 py-6 flex items-center justify-between border-t border-(--border)">
-              <span className="text-xs text-(--fg-faint) tabular-nums tracking-widest">
-                {String(current + 1).padStart(2, "0")} / {String(whoWeAreTabs.length).padStart(2, "0")}
-              </span>
-              <div className="flex gap-2">
-                {whoWeAreTabs.map((_, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    aria-label={`Go to slide ${i + 1}`}
-                    onClick={() => goTo(i)}
-                    className={`w-6 h-0.5 transition-all duration-300 ${
-                      i === current ? "bg-orange" : "bg-(--border) hover:bg-(--fg-faint)"
-                    }`}
-                  />
-                ))}
-              </div>
+              ))}
             </div>
           </div>
 
@@ -246,4 +198,3 @@ export default function WhoWeAreSection() {
     </section>
   );
 }
-

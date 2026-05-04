@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 
 export default function BrandPurposeSection() {
   return (
-    <section className="bg-[var(--bg)] py-24 border-t border-[var(--border)]">
+    <section className="bg-[var(--bg)] py-14 border-t border-[var(--border)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 

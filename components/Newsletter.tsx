@@ -35,7 +35,7 @@ export default function Newsletter() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60vw] h-[40vw] rounded-full bg-[#E8500A]/4 blur-[120px]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-28">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-12">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
 
           {/* Left — copy */}
@@ -43,18 +43,19 @@ export default function Newsletter() {
             <p className="text-sm text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-5">
               Stay Informed
             </p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-              Africa's economic transformation,{" "}
-              <span className="text-[#E8500A]">in your inbox.</span>
+            <h2 className="text-2xl lg:text-3xl font-bold text-white leading-tight mb-6">
+              Bornstellar continues to expand its vision of becoming a leading provider of essential solutions  
+              {" "}
+              <span className="text-[#E8500A]">across Africa’s most critical sectors..</span>
             </h2>
-            <p className="text-base text-white/50 leading-8 max-w-md">
+            {/* <p className="text-base text-white/50 leading-8 max-w-md">
               Subscribe to the Bornstellar newsletter for quarterly updates,
               division spotlights, project milestones, and thought leadership
               on Africa's most critical sectors.
-            </p>
+            </p> */}
 
             {/* Trust signals */}
-            <div className="flex flex-col gap-3 mt-8">
+            {/* <div className="flex flex-col gap-3 mt-8">
               {[
                 "Quarterly digest — no spam, ever",
                 "Division-specific research briefs",
@@ -65,7 +66,7 @@ export default function Newsletter() {
                   <span className="text-sm text-white/40">{item}</span>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Right — form */}
@@ -98,7 +99,7 @@ export default function Newsletter() {
                 </div>
 
                 {/* Interests */}
-                <div className="flex flex-col gap-3">
+                {/* <div className="flex flex-col gap-3">
                   <label className="text-xs text-white/40 tracking-[0.15em] uppercase font-medium">
                     Sectors of Interest
                   </label>
@@ -121,7 +122,7 @@ export default function Newsletter() {
                       );
                     })}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Submit */}
                 <button

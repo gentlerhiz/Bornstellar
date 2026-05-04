@@ -4,8 +4,8 @@ export default function DivisionsStatsSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid sm:grid-cols-3 gap-px bg-(--border)">
           {[
-            { value: "12", label: "Specialised Divisions" },
-            { value: "5", label: "Thematic Clusters" },
+            { value: "13", label: "Specialised Divisions" },
+            { value: "6", label: "Thematic Clusters" },
             { value: "1", label: "Integrated Platform" },
           ].map((s) => (
             <div

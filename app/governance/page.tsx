@@ -1,15 +1,13 @@
 ﻿import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import LeadershipQuoteSection from "@/components/sections/LeadershipQuoteSection";
 import CtaSection from "@/components/sections/CtaSection";
-import GovernancePillarsSection from "@/components/sections/GovernancePillarsSection";
-import GovernanceAccountabilitySection from "@/components/sections/GovernanceAccountabilitySection";
 import GovernanceDirectorStandardsSection from "@/components/sections/GovernanceDirectorStandardsSection";
+import LeadershipTeamSection from "@/components/sections/LeadershipTeamSection";
 
 export const metadata: Metadata = {
   title: "Leadership & Governance — Bornstellar Limited",
   description:
-    "Bornstellar is governed in line with the Companies and Allied Matters Act, 2020, with a board-led structure, clear delegation of authority, and rigorous accountability standards.",
+    "Bornstellar Limited is led by a team of seasoned professionals with deep expertise across industry, finance, and operations.",
 };
 
 export default function GovernancePage() {
@@ -17,16 +15,14 @@ export default function GovernancePage() {
     <>
       <PageHero
         overline="Leadership & Governance"
-        title="Board-led. Ethics-driven. Built to last."
-        subtitle="Bornstellar is governed in line with the Companies and Allied Matters Act, 2020, with a board-led structure, clear accountability frameworks, and zero tolerance for governance failures."
+        title="Leadership Built on Integrity. Governance Anchored in Purpose."
+        subtitle="Bornstellar Limited is led by a team of seasoned professionals with deep expertise across industry, finance, and operations. Our governance structure is designed to ensure accountability, strategic discipline, and sustainable value creation across all divisions and stakeholder relationships."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Leadership" },
         ]}
       />
-      <LeadershipQuoteSection />
-      <GovernancePillarsSection />
-      <GovernanceAccountabilitySection />
+      <LeadershipTeamSection />
       <GovernanceDirectorStandardsSection />
       <CtaSection />
     </>

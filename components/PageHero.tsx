@@ -14,6 +14,7 @@ interface PageHeroProps {
   subtitle?: string;
   breadcrumbs?: Crumb[];
   children?: React.ReactNode;
+  bgImage?: string;
 }
 
 export default function PageHero({
@@ -22,9 +23,19 @@ export default function PageHero({
   subtitle,
   breadcrumbs,
   children,
+  bgImage,
 }: PageHeroProps) {
   return (
     <section className="relative bg-[#0e0d0c] overflow-hidden pt-40 pb-24">
+      {/* Background image */}
+      {bgImage && (
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgImage})` }}
+        />
+      )}
+      {/* Dark overlay — stronger when bg image is present */}
+      <div className={`absolute inset-0 ${bgImage ? "bg-[#0e0d0c]/70" : ""}`} />
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.025] hero-grid pointer-events-none" />
       {/* Bottom-right ambient glow */}

@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 const quickFacts = [
   { number: "30+", label: "Companies / Businesses", sub: "Served" },
   { number: "3+", label: "Years", sub: "In service" },
-  { number: "Top 100", label: "Fastest", sub: "" },
+  { number: "Top 100", label: "Fastest", sub: "Growing" },
   { number: "3", label: "Regions", sub: "Partners across 3 regions" },
   { number: "5+", label: "Sectors", sub: "Multiple sectors" },
 ];

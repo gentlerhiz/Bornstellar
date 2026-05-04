@@ -29,9 +29,7 @@ export default function VisionMissionSection() {
                   Our Vision
                 </p>
                 <div className="w-8 h-[2px] bg-[#E8500A]" />
-                <p className="text-xs text-white/30 tracking-wide leading-6">
-                  The north star that guides every decision across all 12 divisions.
-                </p>
+                
               </div>
 
               {/* Right — vision statement */}
@@ -58,9 +56,7 @@ export default function VisionMissionSection() {
                   Our Mission
                 </p>
                 <div className="w-8 h-[2px] bg-[#E8500A]" />
-                <p className="text-xs text-white/30 tracking-wide leading-6">
-                  How we deliver on our vision — every day, across every division.
-                </p>
+                
               </div>
             </FadeIn>
 
@@ -69,9 +65,6 @@ export default function VisionMissionSection() {
               {missionPoints.map((point, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
                   <div className="group flex items-start gap-6 py-7 hover:bg-white/[0.03] transition-colors duration-300 px-2">
-                    <span className="text-[10px] text-[#E8500A] tracking-[0.3em] font-semibold tabular-nums mt-1 shrink-0">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                     <p className="text-base sm:text-lg text-white/75 leading-8 group-hover:text-white transition-colors duration-300">
                       {point}
                     </p>

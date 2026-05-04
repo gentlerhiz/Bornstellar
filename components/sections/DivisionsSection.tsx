@@ -9,21 +9,21 @@ import { divisions } from "@/lib/divisions";
 
 const divisionImages: Record<string, string> = {
   "information-technology":
-    "/Information.jpeg",
+    "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=85&auto=format&fit=crop",
   "agricultural-business":
     "/agriculture.jpeg",
   "real-estate":
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=85&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1700469919563-ef267d459da5?w=800&q=85&auto=format&fit=crop",
   "machinery-manufacturing":
-    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=85&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1764114903065-4cc137dd303b?w=800&q=85&auto=format&fit=crop",
   "construction-infrastructure":
     "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=85&auto=format&fit=crop",
   "general-trading":
     "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=85&auto=format&fit=crop",
   "oil-gas-services":
-    "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=85&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1678984236460-2ed63ae1c983?w=800&q=85&auto=format&fit=crop",
   "business-consulting":
-    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=85&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1573164574511-73c773193279?w=800&q=85&auto=format&fit=crop",
   "forensic-financial-services":
     "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=85&auto=format&fit=crop",
   "automotive":
@@ -32,11 +32,13 @@ const divisionImages: Record<string, string> = {
     "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800&q=90&auto=format&fit=crop",
   "renewable-energy":
     "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=85&auto=format&fit=crop",
+  "media-digital-management":
+    "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=85&auto=format&fit=crop",
 };
 
 const divisionCategories = [
   { label: "All", slugs: divisions.map((d) => d.slug) },
-  { label: "Technology", slugs: ["information-technology"] },
+  { label: "Technology", slugs: ["information-technology", "research-development"] },
   { label: "Agriculture", slugs: ["agricultural-business"] },
   {
     label: "Built Environment",
@@ -52,13 +54,16 @@ const divisionCategories = [
     slugs: ["oil-gas-services", "renewable-energy"],
   },
   {
-    label: "Governance",
+    label: "Advisory",
     slugs: [
       "general-trading",
       "business-consulting",
       "forensic-financial-services",
-      "research-development",
     ],
+  },
+  {
+    label: "Media",
+    slugs: ["media-digital-management"],
   },
 ];
 
@@ -105,10 +110,12 @@ export default function DivisionsSection() {
               <p className="text-sm text-[#E8500A] tracking-[0.3em] uppercase font-medium mb-4">
                 Our Divisions
               </p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[var(--fg)] leading-tight max-w-xl">
-                12 specialised divisions,
-                <br className="hidden sm:block" /> one unified strategy.
+              <h2 className="text-4xl lg:text-5xl font-bold text-[var(--fg)] leading-tight ">
+                Our divisions span the industries that power real economic growth
               </h2>
+              <p className="mt-3 text-sm text-[var(--fg-muted)] leading-7 ">
+                From technology and agriculture to energy, infrastructure, and beyond. Each one is built to deliver practical solutions, executed with precision and scale across Africa.
+              </p>
             </div>
 
             {/* Arrow nav */}
@@ -201,9 +208,11 @@ export default function DivisionsSection() {
                   <h3 className="text-base font-bold text-[var(--fg)] leading-snug group-hover:text-[#E8500A] transition-colors duration-200">
                     {div.name}
                   </h3>
-                  <p className="text-xs text-[var(--fg-muted)] font-medium tracking-wide leading-relaxed">
-                    {div.tagline}
-                  </p>
+                  {div.slug === "media-digital-management" && (
+                    <p className="text-[10px] text-[var(--fg-faint)] tracking-[0.1em] uppercase font-medium">
+                      Zenith Multipurposes
+                    </p>
+                  )}
                 </div>
 
                 {/* Footer CTA */}
@@ -220,21 +229,7 @@ export default function DivisionsSection() {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <FadeIn delay={0.2}>
-          <div className="mt-12 pt-8 border-t border-[var(--border)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-            <p className="text-sm text-[var(--fg-muted)] leading-7 max-w-lg">
-              Each division operates with dedicated leadership and deep sector expertise —
-              integrated under one parent company and a unified governance framework.
-            </p>
-            <Link
-              href="/divisions"
-              className="inline-flex h-11 px-8 items-center bg-[#E8500A] text-white text-xs font-semibold tracking-[0.15em] uppercase hover:bg-[#ff6b2b] transition-colors duration-300 shrink-0"
-            >
-              All 12 Divisions
-            </Link>
-          </div>
-        </FadeIn>
+        {/* Bottom bar removed */}
 
       </div>
     </section>

@@ -59,10 +59,7 @@ export default function AfricaFocusSection() {
                 Built for Africa, starting from Nigeria.
               </h2>
             </div>
-            <p className="text-sm text-[var(--fg-muted)] leading-8 max-w-sm lg:text-right">
-              Our divisions are structured to support Africa&apos;s most critical
-              development priorities — at scale, and with integrity.
-            </p>
+            
           </div>
         </FadeIn>
 

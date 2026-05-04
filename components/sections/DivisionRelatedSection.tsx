@@ -22,7 +22,7 @@ export default function DivisionRelatedSection({ otherDivisions }: Props) {
               href="/divisions"
               className="text-xs text-(--fg-muted) tracking-[0.15em] uppercase hover:text-orange transition-colors duration-200 hidden sm:block"
             >
-              View All 12 →
+              View All 13 →
             </Link>
           </div>
         </FadeIn>
