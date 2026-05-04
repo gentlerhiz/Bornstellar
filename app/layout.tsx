@@ -28,6 +28,31 @@ export const metadata: Metadata = {
     "agriculture",
     "consulting",
   ],
+  metadataBase: new URL("https://www.bornstellarltd.com"),
+  openGraph: {
+    title: "Bornstellar Limited — Future-ready solutions for Africa's growth",
+    description:
+      "Bornstellar is building the systems that power Africa's growth across technology, infrastructure, energy, and industry.",
+    url: "https://www.bornstellarltd.com/",
+    siteName: "Bornstellar Limited",
+    images: [
+      {
+        url: "/logotest.png",
+        width: 1200,
+        height: 630,
+        alt: "Bornstellar Limited logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bornstellar Limited — Future-ready solutions for Africa's growth",
+    description:
+      "Bornstellar is building the systems that power Africa's growth across technology, infrastructure, energy, and industry.",
+    images: ["/logotest.png"],
+  },
 };
 
 export default function RootLayout({
