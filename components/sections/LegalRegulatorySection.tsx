@@ -12,7 +12,7 @@ const corporateInfo = [
   { field: "Company Name", value: "Bornstellar Limited" },
   { field: "Legal Structure", value: "Private company limited by shares" },
   { field: "Jurisdiction", value: "Federal Republic of Nigeria" },
-  { field: "Registered Office", value: "Ibadan, Oyo State, Nigeria" },
+  { field: "Registered Office", value: "Oluyole Estate, Ibadan, Oyo State, Nigeria" },
   { field: "Date of Incorporation", value: "January 23, 2025" },
   {
     field: "Objects",

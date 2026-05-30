@@ -38,7 +38,7 @@ export default function ContactMainSection() {
                 </p>
                 <div className="flex flex-col gap-2 text-sm text-(--fg-muted) leading-7">
                   <p className="font-semibold text-(--fg)">Bornstellar Limited</p>
-                  <p>Ibadan, Oyo State, Nigeria</p>
+                  <p>Oluyole Estate, Ibadan, Oyo State, Nigeria</p>
                   <p className="text-xs text-(--fg-faint)">
                     Registered under the Companies and Allied Matters Act, 2020
                   </p>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Zenith Multipurposes logo</title>
+  <desc id="desc">A typographic Zenith Multipurposes brand mark with an orange geometric motif.</desc>
+  <defs>
+    <linearGradient id="zgrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFB21D"/>
+      <stop offset="100%" stop-color="#E8500A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" fill="none"/>
+  <g transform="translate(40 40)">
+    <circle cx="120" cy="120" r="112" fill="none" stroke="url(#zgrad)" stroke-width="18" stroke-dasharray="40 20" stroke-linecap="round"/>
+    <circle cx="120" cy="120" r="58" fill="none" stroke="url(#zgrad)" stroke-width="14" opacity="0.85"/>
+    <path d="M92 104 L120 54 L148 104 Z" fill="url(#zgrad)"/>
+    <path d="M82 121 L52 90 L92 150 Z" fill="url(#zgrad)" opacity="0.9"/>
+    <path d="M158 121 L208 90 L168 150 Z" fill="url(#zgrad)" opacity="0.9"/>
+    <path d="M110 150 L84 202 L136 202 Z" fill="url(#zgrad)" opacity="0.9"/>
+  </g>
+  <g fill="#111111" transform="translate(300 95)">
+    <text x="0" y="95" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700" letter-spacing="6">ZENITH</text>
+    <text x="0" y="170" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" letter-spacing="5" fill="#E8500A">MULTIPURPOSES</text>
+  </g>
+</svg>

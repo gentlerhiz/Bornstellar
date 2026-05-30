@@ -6,7 +6,7 @@ const leaders = [
     name: "Sijuade Henry Oluwatimilehin",
     role: "Chairman & Chief Executive Officer",
     image: "/ceoImage.png",
-    bio: "Sijuade Henry Oluwatimilehin is the founder and Chief Executive Officer of Bornstellar Limited, a diversified and fast-growing conglomerate headquartered in Ibadan, Oyo State, Nigeria. Since its establishment in 2025, Bornstellar has rapidly expanded into a structured, multi-division platform with growing operations spanning technology, agriculture, real estate, energy, manufacturing, construction, and several other critical sectors across Africa.",
+    bio: "Sijuade Henry Oluwatimilehin is the founder and Chief Executive Officer of Bornstellar Limited, a diversified and fast-growing conglomerate headquartered in Oluyole Estate, Ibadan, Oyo State, Nigeria. Since its establishment in 2025, Bornstellar has rapidly expanded into a structured, multi-division platform with growing operations spanning technology, agriculture, real estate, energy, manufacturing, construction, and several other critical sectors across Africa.",
   },
   {
     name: "Daniel Sijuade",

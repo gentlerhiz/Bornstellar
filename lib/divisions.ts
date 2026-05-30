@@ -8,8 +8,15 @@ export interface Division {
   approach?: string;
   howWeWork?: string;
   services: string[];
+  audiences?: {
+    label: string;
+    description: string;
+  }[];
+  whyItMatters?: string;
   sectorCategories?: string[];
   targetSectors?: string;
+  brandLogoSrc?: string;
+  brandLink?: string;
   icon: string;
 }
 
@@ -18,332 +25,446 @@ export const divisions: Division[] = [
     id: 1,
     slug: "information-technology",
     name: "Information Technology Services",
-    tagline: "Accelerating Africa's digital economy",
+    tagline: "Building secure digital systems that perform at scale",
     overview:
-      "Bornstellar's IT Services division helps African organizations design, build, and manage the digital systems that underpin modern institutions. We translate complex technology requirements into practical, scalable solutions suited to African regulatory and infrastructure realities.",
-    howWeWork:
-      "We align every technology roadmap with local business realities — prioritizing high availability, security, and interoperability over unnecessary complexity. Our teams combine local insight with global best practices to serve banks, governments, SMEs, and development projects.",
+      "As a division of Bornstellar, the Information Technology Services division designs, builds, and manages digital systems that help clients run more efficiently, securely, and at scale. The division focuses on practical technology implementation, business continuity, and long-term digital capability for organisations that need reliable systems rather than abstract transformation language.",
     services: [
-      "IT strategy and architecture consultancy",
-      "Custom software development and systems integration",
-      "Cloud and infrastructure advisory",
-      "Cybersecurity assessments and implementation support",
-      "Technology training and capacity building",
-      "Digital transformation roadmaps aligned with African regulatory environments",
+      "Design and implementation of ERP, CRM, HR, accounting, workflow automation, and business intelligence systems",
+      "Custom software development for web platforms, mobile applications, portals, and digital service delivery products",
+      "Systems integration across payment platforms, identity systems, databases, APIs, and enterprise software environments",
+      "Cloud and infrastructure deployment, including servers, backup systems, migration projects, disaster recovery, and managed hosting",
+      "Cybersecurity services including vulnerability assessments, endpoint protection, access control, network hardening, and security reviews",
+      "IT procurement advisory, workplace technology deployment, structured cabling coordination, device rollout, and managed support",
+      "Technology training, digital onboarding, and capacity-building programmes for staff, administrators, and technical teams",
     ],
-    sectorCategories: [
-      "Financial services",
-      "Government & public sector",
-      "Agriculture",
-      "Education",
-      "Healthcare",
-      "Manufacturing",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Professionals, founders, and independent operators who need secure digital tools, websites, data protection, or tailored business systems.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "SMEs, corporates, financial institutions, and operational teams seeking technology infrastructure, software, and stronger internal systems.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Institutions and project sponsors looking for technology partners that can support bankable digital infrastructure, operational efficiency, and scalable deployment.",
+      },
     ],
-    targetSectors:
-      "Financial services, government, agriculture, education, healthcare, and manufacturing.",
+    whyItMatters:
+      "The division helps clients reduce inefficiency, improve visibility over operations, and build stronger digital foundations for growth. For investors and institutional stakeholders, it also represents a service line positioned around recurring demand, digital modernization, and defensible operational relevance.",
     icon: "💻",
   },
   {
     id: 2,
     slug: "agricultural-business",
-    name: "Agricultural Business",
-    tagline: "Strengthening Africa's food systems",
+    name: "Agricultural Services",
+    tagline: "Organising production, aggregation, and market access",
     overview:
-      "The Agricultural Business division supports end-to-end food and agribusiness value chains — from primary production and input supply to market access and export linkages. We exist to help African farmers capture more value from the land.",
-    howWeWork:
-      "We aim to boost productivity, reduce post-harvest losses, and connect African farmers to regional and export markets under transparent, long-term arrangements that guarantee fair value.",
+      "As a division of Bornstellar, the Agricultural Services division operates across production, supply, aggregation, and market access within the agricultural value chain. The division is structured to turn agricultural activity into more organised, commercially viable operations that create value for producers, buyers, and capital partners.",
     services: [
-      "Commercial farming operations and outgrower schemes",
-      "Livestock rearing and dairy production",
-      "Sourcing, aggregation, and trading of agri-produce",
-      "Supply of agricultural inputs, equipment, and services",
-      "Development of cold chain and logistics partnerships",
-      "Market linkages for regional and export opportunities",
+      "Commercial crop farming operations for grains, vegetables, staple crops, and other high-demand produce",
+      "Outgrower scheme development and management, including farmer onboarding, extension coordination, input support, and produce collection frameworks",
+      "Livestock and dairy operations covering breeding support, feed systems, production management, and commercial supply arrangements",
+      "Sourcing, aggregation, grading, and trading of agricultural produce for processors, distributors, and export-oriented off-takers",
+      "Supply of agricultural inputs including seeds, fertilizers, agrochemicals, irrigation tools, and mechanized farming support",
+      "Farm mechanization services such as land clearing, ploughing, harrowing, planting, harvesting, and basic equipment leasing",
+      "Post-harvest handling, storage coordination, cold-chain support, and early-stage processing partnerships",
+      "Market linkage arrangements connecting farms and producer groups to institutional buyers, retailers, processors, and exporters",
     ],
-    sectorCategories: [
-      "Farm inputs",
-      "Mechanization",
-      "Post-harvest handling",
-      "Storage",
-      "Processing",
-      "Market access",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Farmers, landowners, agripreneurs, and cooperatives seeking inputs, mechanization, market access, or production support.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Processors, food distributors, retailers, hospitality operators, and export buyers needing reliable supply channels.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Parties interested in structured agribusiness opportunities, scalable production models, commodity access, and value-chain participation.",
+      },
     ],
-    targetSectors: "Agriculture, agribusiness, food processing, and export trade.",
+    whyItMatters:
+      "The division creates commercial pathways around food production, agricultural trade, and supply-chain coordination. For investors, it opens exposure to productive assets and recurring demand in a sector tied to essential consumption and long-term economic value.",
     icon: "🌾",
   },
   {
     id: 3,
     slug: "real-estate",
     name: "Real Estate & Land Development",
-    tagline: "Building the spaces Africa calls home",
+    tagline: "Converting land and assets into commercially sound developments",
     overview:
-      "This division structures and delivers real estate and land development projects aligned with Africa's urbanization, industrialization, and infrastructure needs. We bring together regulatory knowledge, capital structuring, and execution capability to create bankable, community-conscious developments.",
-    approach:
-      "We emphasize transparent land processes, regulatory compliance, and sustainable design — ensuring every development is legally sound, financially viable, and beneficial to surrounding communities.",
+      "As a division of Bornstellar, the Real Estate and Land Development division structures, develops, and manages property opportunities across residential, commercial, and industrial use cases. The division is designed to convert land and built assets into organised, legally sound, and commercially attractive developments.",
     services: [
-      "Real estate and land consultancy",
-      "Development of residential, commercial, and industrial assets",
-      "Land assembly, planning, and infrastructure provisioning",
-      "Joint venture and PPP-based developments",
-      "Property management and facility operations support",
+      "Construction and development of houses, apartments, residential estates, terraces, duplexes, and serviced living projects",
+      "Development of commercial buildings, office spaces, retail facilities, hospitality assets, and mixed-use properties",
+      "Industrial property development, including warehouses, logistics facilities, yard spaces, and light industrial sites",
+      "Land sourcing, acquisition support, title verification, due diligence, regularization, and documentation support",
+      "Site planning, estate layout preparation, access road coordination, drainage planning, and utility infrastructure support",
+      "Joint-venture development arrangements with landowners, institutional investors, and project finance partners",
+      "Property sales coordination, leasing support, tenant placement, and occupancy management",
+      "Property and facility management services, including maintenance oversight, service charge administration, and operational support",
     ],
-    sectorCategories: [
-      "Residential estates",
-      "Commercial offices",
-      "Retail developments",
-      "Industrial parks",
-      "Mixed-use developments",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Homebuyers, private landowners, families, and professionals seeking housing, land verification, or managed property opportunities.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Developers, retailers, office users, manufacturers, logistics operators, and commercial tenants.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Partners seeking real asset exposure, structured developments, land-backed ventures, or cashflow-generating property assets.",
+      },
     ],
-    targetSectors:
-      "Residential estates, commercial offices, industrial parks, mixed-use developments.",
+    whyItMatters:
+      "The division combines asset creation with legal and commercial discipline, making it relevant to both end-users and capital partners. It also provides Bornstellar with a division anchored in tangible assets, project execution, and long-term value retention.",
     icon: "🏗️",
   },
   {
     id: 4,
     slug: "machinery-manufacturing",
     name: "Machinery & Equipment Manufacturing",
-    tagline: "Industrialising Africa from the ground up",
+    tagline: "Designing usable machinery for real operating environments",
     overview:
-      "The Machinery and Equipment Manufacturing division advances Africa's mechanization and industrialization agenda — designing and producing durable, context-appropriate equipment built to perform under local conditions and maintained by local technicians.",
-    approach:
-      "Every piece of equipment we build prioritizes durability and repairability over complexity — reducing downtime, cutting foreign exchange pressure, and empowering local technicians to keep production moving.",
+      "As a division of Bornstellar, the Machinery and Equipment Manufacturing division designs, fabricates, assembles, sells, and maintains equipment for agricultural, industrial, and technical use. The division is positioned to deliver practical machinery solutions for clients who need equipment that is usable, serviceable, and aligned with real operating requirements.",
     services: [
-      "Design and manufacturing of farm machinery and equipment",
-      "Production and assembly of auto-related machinery and tools",
-      "Localization of spare parts and components",
-      "After-sales service, maintenance, and technical support networks",
-      "Technology transfer partnerships with international providers",
+      "Design and fabrication of agricultural machinery such as ploughs, planters, tillage tools, threshers, shellers, and small-scale processing machines",
+      "Manufacturing and assembly of workshop machinery, industrial tools, fabrication units, and production support equipment",
+      "Selling of robotics systems, automation units, and smart mechanical solutions for industrial, agricultural, and institutional clients",
+      "Manufacturing and customization of drones for surveillance, mapping, agricultural spraying, inspection, monitoring, and enterprise operations",
+      "Production of specialized machines for client-specific use cases, including custom-built equipment for factories, farms, workshops, and technical projects",
+      "Local production and supply of spare parts, metal components, machine accessories, and replacement items",
+      "Equipment installation, after-sales servicing, preventive maintenance, repairs, and technical support agreements",
+      "Technical partnership implementation, localized assembly support, and product adaptation for third-party manufacturers entering the market",
     ],
-    sectorCategories: [
-      "Tractors & tillage equipment",
-      "Harvesters",
-      "Irrigation systems",
-      "Automotive tools",
-      "Industrial machinery",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Farm owners, workshop operators, technical entrepreneurs, and buyers looking for usable machinery or specialised equipment.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Agricultural companies, factories, engineering firms, service workshops, security providers, and industrial operators.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Stakeholders looking at manufacturing, equipment sales, spare-parts demand, and local industrial capability as investable opportunities.",
+      },
     ],
-    targetSectors:
-      "Agriculture, automotive, industrial manufacturing, and infrastructure.",
+    whyItMatters:
+      "The division creates value through physical products, maintenance revenue, technical capability, and localised production potential. It positions Bornstellar within sectors tied to mechanisation, industrial supply, and long-term equipment demand.",
     icon: "⚙️",
   },
   {
     id: 5,
     slug: "construction-infrastructure",
     name: "Construction & Infrastructure Contracting",
-    tagline: "Connecting people, markets, and industries",
+    tagline: "Executing physical infrastructure with discipline and control",
     overview:
-      "Bornstellar's Construction and Infrastructure division executes civil and infrastructure projects that are critical to economic connectivity and productivity. We bring disciplined project management, HSE compliance, and stakeholder engagement to every engagement.",
-    approach:
-      "We operate as principal contractor or subcontractor depending on project structure — always with rigorous HSE standards, transparent reporting, and active stakeholder engagement built into the delivery model.",
+      "As a division of Bornstellar, the Construction and Infrastructure Contracting division delivers built projects across transport, industrial, commercial, and public-use categories. The division is focused on execution, site management, compliance, and the delivery of physical infrastructure that clients can use, operate, and expand over time.",
     services: [
-      "Roads, bridges, and transportation infrastructure",
-      "Industrial and commercial facilities",
-      "Social infrastructure — schools, healthcare facilities, community centers",
-      "Rehabilitation, maintenance, and infrastructure lifecycle services",
-      "Project management, HSE compliance, and quality assurance",
+      "Construction of roads, bridges, culverts, drains, and access routes for public and private sector clients",
+      "Building of residential projects, commercial facilities, industrial buildings, warehouses, and operational sites",
+      "Construction of schools, clinics, healthcare facilities, community centres, and other social infrastructure",
+      "Civil works, earthworks, structural concrete works, site preparation, and utility-related construction support",
+      "Rehabilitation, maintenance, expansion, and upgrade works for aging or incomplete infrastructure assets",
+      "General contracting and subcontracting for public projects, private developments, and sector-specific assignments",
+      "Project management services covering planning, scheduling, procurement coordination, reporting, quality control, and HSE implementation",
+      "Material sourcing support, site mobilization, contractor coordination, and delivery supervision",
     ],
-    sectorCategories: [
-      "Transport",
-      "Energy",
-      "Water & sanitation",
-      "Education",
-      "Healthcare",
-      "Agriculture",
-      "Industrial infrastructure",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Private developers, landowners, and clients building homes or small-scale projects.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Manufacturers, institutions, developers, facility owners, and organisations requiring construction capability.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Project sponsors, infrastructure capital providers, and partners seeking disciplined contractors for tangible asset deployment.",
+      },
     ],
-    targetSectors:
-      "Transport, energy, water & sanitation, education, healthcare, and industrial infrastructure.",
+    whyItMatters:
+      "The division provides direct participation in physical asset delivery and infrastructure execution. It supports revenue through project contracts while reinforcing Bornstellar’s presence in long-duration, capital-relevant sectors.",
     icon: "🏛️",
   },
   {
     id: 6,
     slug: "general-trading",
     name: "General Trading & Commerce",
-    tagline: "Moving essential goods across Africa",
+    tagline: "Moving goods through structured trade relationships",
     overview:
-      "This division manages Bornstellar's trading, distribution, and commerce activities — moving essential goods efficiently and transparently across African and international markets while building durable trade relationships.",
-    howWeWork:
-      "To move essential goods efficiently and transparently — supporting industrial, agricultural, and consumer markets while building reliable, cross-border trade relationships that generate lasting economic value.",
+      "As a division of Bornstellar, the General Trading and Commerce division manages the buying, selling, movement, and distribution of goods across selected markets. The division operates as a commercial platform for products, supply relationships, warehousing, logistics coordination, and structured trade transactions.",
     services: [
-      "Import and export of strategic goods and commodities",
-      "Wholesale and retail distribution networks",
-      "Supply-chain structuring, warehousing, and logistics partnerships",
-      "Structured trade solutions with counterparties, financiers, and insurers",
-      "Agency and brokerage services",
+      "Import and export of commodities, industrial materials, agricultural goods, machinery, and selected consumer products",
+      "Wholesale and bulk distribution of products to dealers, institutional buyers, retailers, and sector-focused customers",
+      "Sourcing and supply of construction materials, production inputs, equipment, and commercial inventory",
+      "Warehousing coordination, storage arrangements, stock movement planning, and distribution support",
+      "Structured trade deals involving supply agreements, off-take structures, financed trade, and cross-border commercial transactions",
+      "Agency and brokerage services for manufacturers, suppliers, and foreign counterparties seeking representation or market access",
+      "Product routing, logistics coordination, and channel-building for regional distribution networks",
     ],
-    sectorCategories: [
-      "Agricultural commodities",
-      "Industrial inputs",
-      "Consumer goods",
-      "Machinery",
-      "Construction materials",
-      "Energy products",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Merchants, dealers, contractors, and buyers seeking direct access to goods or commercial supply.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Manufacturers, distributors, retailers, and institutions looking for dependable trade and supply-chain execution.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Parties interested in inventory-backed trade, distribution businesses, and scalable commerce platforms.",
+      },
     ],
-    targetSectors:
-      "Agricultural commodities, industrial inputs, consumer goods, machinery, construction materials, and energy products.",
+    whyItMatters:
+      "The division creates value through movement, margins, and commercial relationships rather than asset-heavy production alone. It adds liquidity, market access, and transaction-driven relevance to Bornstellar’s portfolio.",
     icon: "📦",
   },
   {
     id: 7,
     slug: "oil-gas-services",
     name: "Oil & Gas Services",
-    tagline: "Safe, local, compliant energy support",
+    tagline: "Operational support for energy projects",
     overview:
-      "The Oil and Gas Services division supports operators and contractors across upstream, midstream, and downstream value chains — blending global technical standards with strong local participation to create lasting value in host communities.",
-    approach:
-      "We align global operational standards with Nigerian local content requirements — ensuring that host communities and local workforce benefit meaningfully from energy sector activity.",
+      "As a division of Bornstellar, the Oil and Gas Services division provides operational services to projects across upstream, midstream, and downstream environments. The division is focused on logistics, manpower, compliance-related services, and contract-based engagement within the energy sector.",
     services: [
-      "Technical and non-technical support services to oil and gas projects",
-      "Project management support and logistics coordination",
-      "Ancillary services aligned with local content regulations",
-      "Support for integrity, safety, and environmental compliance",
-      "Training and capacity building for local workforce",
+      "Supply of technical and non-technical manpower for field operations, site activities, and project-based assignments",
+      "Logistics coordination covering transport, materials movement, marine support interfaces, and project-site delivery requirements",
+      "Ancillary oil and gas services aligned with local content obligations, subcontracting structures, and operational support needs",
+      "Field support for safety programmes, integrity-related services, environmental monitoring coordination, and compliance documentation",
+      "Training and workforce development for personnel participating in operational and community-linked energy projects",
+      "Procurement coordination and support sourcing for approved vendors, local contractors, and project operators",
     ],
-    sectorCategories: [
-      "Upstream support",
-      "Midstream logistics & infrastructure",
-      "Downstream distribution",
-      "Compliance & regulatory support",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Trained workers, technical personnel, and service professionals seeking project-linked opportunities.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Operators, EPC contractors, service companies, and subcontractors needing support capacity and local execution.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Stakeholders seeking exposure to oil and gas service contracts, energy-linked support businesses, and local participation models.",
+      },
     ],
-    targetSectors:
-      "Upstream support, midstream logistics, downstream distribution, and compliance/regulatory support.",
+    whyItMatters:
+      "The division gives Bornstellar a route into contract-driven activity in the energy sector without depending solely on asset ownership. It is relevant where operational support, local participation, and sector access create recurring service demand.",
     icon: "🛢️",
   },
   {
     id: 8,
     slug: "business-consulting",
     name: "Business & Management Consulting",
-    tagline: "Strengthening institutions, improving performance",
+    tagline: "Helping organisations build discipline, structure, and credibility",
     overview:
-      "This division provides advisory and support services that strengthen institutions, professionalize operations, and improve sustainable performance — helping organizations build the structures that attract investment and sustain long-term growth.",
-    howWeWork:
-      "We help clients institutionalize structures, processes, and controls that sustain growth — professionalizing operations, building investor confidence, and supporting the transition from informal to formal governance.",
+      "As a division of Bornstellar, the Business and Management Consulting division helps clients structure operations, improve governance, and build stronger execution systems. The division is designed for organisations that need clearer internal processes, stronger management discipline, and more credible operating frameworks.",
     services: [
-      "Management and organizational consulting",
-      "Office administration and business process outsourcing",
-      "Business support for local and international investors",
-      "Governance, risk, and compliance advisory",
-      "Strategic planning and performance improvement",
-      "Change management and institutional development",
+      "Organisational design, reporting-line structuring, role clarification, and operating model reviews",
+      "Business process design for finance, procurement, administration, HR, and internal reporting systems",
+      "Governance, risk, and compliance frameworks, including policy drafting, controls documentation, and oversight structures",
+      "Strategic planning support, implementation roadmaps, performance reviews, and management scorecards",
+      "Change management and institutional development programmes for growing organisations and transitioning businesses",
+      "Business support services for local and foreign investors, including market-entry guidance, local setup coordination, and administrative support",
+      "Business process outsourcing and back-office administration under defined service arrangements",
     ],
-    sectorCategories: [
-      "Corporates",
-      "SMEs",
-      "Government agencies",
-      "Development institutions",
-      "Family businesses",
-      "Foreign investors",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Founders, executives, family business leaders, and professionals building more structured enterprises.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "SMEs, corporates, institutions, and operating companies seeking process improvement and stronger management systems.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Firms and sponsors that require governance discipline, reporting structures, and operating visibility in portfolio or partner businesses.",
+      },
     ],
-    targetSectors:
-      "Corporates, SMEs, government agencies, development institutions, and foreign investors entering African markets.",
+    whyItMatters:
+      "The division turns ambition into structure by helping clients organise how decisions, controls, and operations work in practice. For Bornstellar, it adds a service line tied to organisational maturity, institutional confidence, and strategic execution.",
     icon: "📊",
   },
   {
     id: 9,
     slug: "forensic-financial-services",
     name: "Forensic Financial Services",
-    tagline: "Protecting the integrity of financial systems",
+    tagline: "Investigative accounting and evidence-based financial review",
     overview:
-      "Bornstellar's Forensic Financial Services division supports the integrity of financial systems and corporate governance — combining deep accounting expertise with investigative rigor to serve regulators, lenders, investors, and legal teams in complex financial matters.",
-    howWeWork:
-      "Strong forensic and governance capabilities are essential for building investor confidence, supporting the rule of law, and enabling the transparent capital markets that African economies need to grow.",
+      "As a division of Bornstellar, the Forensic Financial Services division handles financially sensitive matters that require investigative accounting, control review, and evidence-based analysis. The division is built for clients dealing with fraud risk, disputes, due diligence needs, or governance-related financial concerns.",
     services: [
-      "Forensic accounting and financial investigations",
-      "Fraud risk assessments and internal controls design",
-      "Litigation support, dispute analysis, and expert witness reporting",
-      "Asset tracing and recovery support",
-      "Due diligence for mergers, acquisitions, and investments",
-      "Training for boards, regulators, and finance teams on financial integrity",
+      "Forensic accounting reviews, transaction analysis, and reconstruction of disputed or unclear financial records",
+      "Financial investigations into suspected irregularities, control failures, undocumented exposures, and misuse of funds",
+      "Fraud risk assessments and internal control design for institutions seeking stronger prevention and oversight systems",
+      "Litigation support, dispute analysis, damages review, and expert financial reporting",
+      "Asset tracing support and recovery-oriented financial review in coordination with legal or regulatory processes",
+      "Due diligence services for mergers, acquisitions, investment decisions, lending transactions, and strategic partnerships",
+      "Training programmes for boards, executives, finance teams, and regulators on financial integrity, fraud prevention, and control culture",
     ],
-    sectorCategories: [
-      "Regulators",
-      "Corporate entities",
-      "Lenders & investors",
-      "Legal teams",
-      "Development institutions",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "High-net-worth clients, business owners, shareholders, and parties involved in disputes or financial reviews.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Companies, lenders, legal teams, boards, and regulated institutions with exposure to fraud, disputes, or transaction risk.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Acquirers, lenders, funds, and transaction sponsors requiring clean financial insight and risk visibility before committing capital.",
+      },
     ],
-    targetSectors:
-      "Financial services, regulators, legal, investment, and corporate governance.",
+    whyItMatters:
+      "The division helps clients defend trust, uncover risk, and make better-informed financial decisions. It also reinforces Bornstellar’s broader positioning around governance, accountability, and commercially relevant advisory depth.",
     icon: "🔍",
   },
   {
     id: 10,
     slug: "automotive",
     name: "Automotive Manufacturing & Distribution",
-    tagline: "Driving Africa's mobility revolution",
+    tagline: "Combining assembly, supply, sales, and service networks",
     overview:
-      "This division addresses Africa's mobility needs — designing, assembling, and distributing vehicles and automotive components that are accessible, reliable, and suited to local road and economic conditions.",
-    howWeWork:
-      "We seek to deepen local value addition, create skilled jobs, and improve access to safe, reliable, and affordable mobility — contributing to both industrialization and the everyday economic lives of African communities.",
+      "As a division of Bornstellar, the Automotive Manufacturing and Distribution division participates in vehicle assembly, component supply, automotive sales, and service network development. The division is structured to address both vehicle supply and the wider commercial ecosystem that keeps mobility operating effectively.",
     services: [
-      "Manufacture, fabrication, and assembly of vehicles and automotive parts",
-      "Import, export, and distribution of vehicles and components",
-      "Brokerage and marketing of automotive products",
-      "Establishment of service, maintenance, and spares networks",
-      "Support for local assembly and industrialization initiatives",
+      "Assembly and fabrication of selected vehicles, body structures, utility vehicles, and commercial-use automotive units",
+      "Manufacturing and supply of automotive parts, body components, workshop tools, and related mechanical items",
+      "Importation, stocking, sales, and distribution of passenger vehicles, commercial vehicles, motorcycles, and spare parts",
+      "Vehicle brokerage and fleet sourcing services for institutions, transport operators, and bulk buyers",
+      "Establishment of maintenance centres, service workshops, diagnostics support, and scheduled repair networks",
+      "Spare-parts distribution systems and after-sales support for dealers, fleet owners, and operational clients",
+      "Partnership support for local assembly, product localisation, dealership rollout, and industrial automotive initiatives",
     ],
-    sectorCategories: [
-      "Commercial vehicles",
-      "Passenger vehicles",
-      "Motorcycles",
-      "Automotive components",
-      "Vehicle financing",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Vehicle buyers, transport entrepreneurs, fleet operators, and private clients seeking sales or maintenance services.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Logistics firms, mobility operators, corporate fleets, dealerships, and workshop networks.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Partners interested in automotive assembly, distribution channels, mobility commerce, and service-network growth.",
+      },
     ],
-    targetSectors:
-      "Commercial vehicles, passenger vehicles, motorcycles, automotive components, and vehicle financing.",
+    whyItMatters:
+      "The division combines product sales, service infrastructure, and industrial participation in a sector tied to movement, logistics, and recurring maintenance demand. It provides Bornstellar with a commercially visible entry point into mobility-linked markets.",
     icon: "🚗",
   },
   {
     id: 11,
     slug: "research-development",
     name: "Research & Development",
-    tagline: "Africa's innovation engine",
+    tagline: "Testing ideas, validating solutions, and de-risking decisions",
     overview:
-      "The Research and Development division is Bornstellar's innovation engine — ensuring that every strategic decision, product, and investment is grounded in evidence, data, and continuous experimentation rather than assumptions or imported models that may not fit African realities.",
-    howWeWork:
-      "We focus on agricultural technology and productivity, renewable energy and storage, manufacturing process innovation, digital platforms, infrastructure materials, and financial systems — all researched through the lens of what works for Africa.",
+      "As a division of Bornstellar, the Research and Development division provides structured inquiry, testing, and validation across products, sectors, and strategic opportunities. The division exists to generate decision-grade insight, test commercial ideas, and support evidence-based development across the wider group and selected clients.",
     services: [
-      "Scientific, technical, economic, and industrial research",
-      "Pilot projects, proof-of-concept initiatives, and technology localization",
-      "Policy, market, and impact studies to inform investment and strategy",
-      "Collaboration with universities, research institutes, and development partners",
-      "Testing and validation of new technologies, processes, and business models",
+      "Scientific, technical, industrial, and commercial research assignments tied to identified business opportunities or sector needs",
+      "Market studies, policy studies, feasibility reviews, and impact assessments to support strategy and investment decisions",
+      "Pilot projects and proof-of-concept development for products, services, and operating models",
+      "Technology testing, adaptation, and localisation for digital systems, machinery, materials, and applied solutions",
+      "Product validation, field trials, and operational performance review before larger-scale deployment",
+      "Research collaboration with universities, institutes, development partners, government entities, and private-sector innovators",
     ],
-    sectorCategories: [
-      "Universities",
-      "Research institutes",
-      "Government agencies",
-      "Development partners",
-      "Private sector innovators",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Innovators, founders, researchers, and technical entrepreneurs seeking validation, pilots, or market insight.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "Operating companies, manufacturers, developers, and institutions requiring research-backed decisions.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Parties seeking feasibility evidence, risk reduction, market studies, or pilot-stage intelligence before funding deployment.",
+      },
     ],
-    targetSectors:
-      "Agricultural technology, renewable energy and storage, manufacturing, digital platforms, and financial systems innovation.",
+    whyItMatters:
+      "The division creates disciplined learning and improves the quality of commercial decision-making. It also strengthens Bornstellar’s ability to build, invest, and expand based on tested assumptions rather than unchecked opportunity claims.",
     icon: "🔬",
   },
   {
     id: 12,
     slug: "renewable-energy",
     name: "Renewable Energy Solutions",
-    tagline: "Clean power for Africa's future",
+    tagline: "Deploying dependable solar and hybrid power systems",
     overview:
-      "The Renewable Energy Solutions division supports Africa's transition to cleaner, more reliable power — developing and deploying solar and hybrid energy systems that serve communities, businesses, and industrial operations across the continent.",
-    howWeWork:
-      "To expand access to affordable, clean power while supporting industrialization and reducing carbon intensity — reaching the households, farms, and businesses that the central grid has yet to serve.",
+      "As a division of Bornstellar, the Renewable Energy Solutions division develops and delivers solar and hybrid power systems for residential, commercial, institutional, and community use. The division is focused on deployable energy solutions that reduce dependence on unstable power supply and create more reliable operating environments for clients.",
     services: [
-      "Design, development, and deployment of solar energy solutions",
-      "Manufacturing, assembly, and integration of renewable energy modules",
-      "Hybrid and off-grid systems for communities, farms, SMEs, and industry",
-      "Energy efficiency, storage, and smart systems advisory",
-      "Public-private partnerships for rural electrification",
+      "Design and installation of solar home systems for households, private clients, and small property users",
+      "Delivery of hybrid and off-grid systems for estates, communities, farms, clinics, schools, and operational sites",
+      "Commercial and industrial solar solutions for offices, factories, warehouses, retail operations, and business campuses",
+      "Supply, assembly, and integration of solar panels, batteries, inverters, charge controllers, and supporting electrical components",
+      "Backup power systems, storage integration, and energy optimisation support for clients reducing generator dependence",
+      "Energy audits, efficiency recommendations, load assessment, and technical advisory for new and existing power systems",
+      "Partnership delivery for rural electrification projects, donor-linked programmes, and public-private energy initiatives",
     ],
-    sectorCategories: [
-      "Solar home systems",
-      "Mini-grids",
-      "Commercial & industrial solar",
-      "Agricultural solar",
-      "Backup power",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Homeowners, landlords, household users, and private customers seeking more reliable power.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "SMEs, factories, farms, schools, clinics, and corporate users needing cost-conscious energy solutions.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Sponsors interested in distributed energy, infrastructure-linked clean power, and utility-adjacent energy deployment opportunities.",
+      },
     ],
-    targetSectors:
-      "Solar home systems, mini-grids, commercial/industrial solar, agricultural solar, and backup power.",
+    whyItMatters:
+      "The division addresses a direct operating need for homes and businesses while also sitting within a globally relevant energy transition space. For Bornstellar, it combines product delivery, technical installation, and long-term infrastructure value.",
     icon: "☀️",
   },
   {
@@ -351,29 +472,39 @@ export const divisions: Division[] = [
     slug: "media-digital-management",
     name: "Media & Digital Management",
     businessName: "Zenith Multipurposes",
-    tagline: "Shaping Africa's digital narrative",
+    tagline: "Creating digital visibility through strategy and execution",
     overview:
-      "Operating under the Zenith Multipurposes brand, this division delivers end-to-end digital and media services for organizations that want to build compelling, credible, and commercially effective presences across digital platforms.",
-    howWeWork:
-      "We combine strategic thinking with creative production capability — helping organizations not just show up online, but build audiences, communicate value, and manage reputation with consistency and impact.",
+      "As a division of Bornstellar operating under the Zenith Multipurposes brand, the Media and Digital Management division provides digital communication, content production, and brand execution services for organisations and public-facing businesses. The division is structured around audience development, brand clarity, digital visibility, and managed online presence.",
     services: [
-      "Social media strategy, management, and community engagement",
-      "Content production — video, photography, copy, and creative assets",
-      "Digital marketing — SEO, paid media, and performance campaigns",
-      "Brand strategy, identity development, and creative direction",
-      "Online reputation management and crisis communication",
-      "Analytics, reporting, and digital performance advisory",
+      "Social media management including planning, account management, publishing, moderation, and audience engagement",
+      "Content production for video, photography, design, copywriting, campaign assets, and platform-ready creative materials",
+      "Digital marketing services covering SEO, paid advertising, campaign execution, lead-generation support, and performance optimisation",
+      "Brand strategy and identity development, including naming, positioning, visual identity, messaging, and brand system support",
+      "Online reputation management, issue monitoring, public response support, and crisis communication handling",
+      "Analytics, reporting, platform reviews, and digital performance advisory for brands and institutions",
+      "Additional corporate branding services including profiles, brochures, catalogues, flyers, visual collateral, and digital business presentation assets",
     ],
-    sectorCategories: [
-      "Corporates",
-      "SMEs",
-      "NGOs",
-      "Government agencies",
-      "Startups",
-      "Personal brands",
+    audiences: [
+      {
+        label: "Individuals",
+        description:
+          "Founders, professionals, creators, and public-facing personalities seeking stronger brand and digital presence.",
+      },
+      {
+        label: "Businesses",
+        description:
+          "SMEs, corporates, NGOs, institutions, startups, and service providers needing media, branding, and digital growth support.",
+      },
+      {
+        label: "Investors",
+        description:
+          "Portfolio companies, market-entry ventures, and brands that require communication infrastructure and reputation-ready positioning.",
+      },
     ],
-    targetSectors:
-      "Corporates, SMEs, government agencies, NGOs, startups, and consumer brands seeking digital growth across African markets.",
+    whyItMatters:
+      "The division turns visibility into structured brand value through content, strategy, and ongoing digital execution. It reflects existing service strengths already associated with Zenith Multipurposes and gives Bornstellar a commercially relevant presence in media and communications.",
+    brandLogoSrc: "/zenith-multipurposes-logo.svg",
+    brandLink: "https://zenithmultipurposes.com",
     icon: "📱",
   },
 ];

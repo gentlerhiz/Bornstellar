@@ -3,10 +3,7 @@ import PageHero from "@/components/PageHero";
 import CoreBrandSection from "@/components/sections/CoreBrandSection";
 import VisionMissionSection from "@/components/sections/VisionMissionSection";
 import ValuesSection from "@/components/sections/ValuesSection";
-import StatsSection from "@/components/sections/StatsSection";
-import LeadershipQuoteSection from "@/components/sections/LeadershipQuoteSection";
 import CtaSection from "@/components/sections/CtaSection";
-import AfricaFocusSection from "@/components/sections/AfricaFocusSection";
 import GoalsSection from "@/components/sections/GoalsSection";
 import QuickFactsSection from "@/components/sections/QuickFactsSection";
 
@@ -21,9 +18,10 @@ export default function AboutPage() {
     <>
       <PageHero
         // overline="About Bornstellar"
-        title="Built for Africa's complexity."
-        subtitle="Bornstellar Limited is a Nigeria-incorporated multi-division platform delivering end-to-end solutions across Africa's most critical sectors — from digital transformation and food systems to infrastructure, energy, and governance."
+        title="The partner your business needs across every sector that matters."
+        subtitle="We are a multi-division company delivering Solutions from digital transformation and Agriculture to infrastructure, energy, and advisory services"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
+        bgImage="/Information.jpeg"
       />
       <CoreBrandSection />
       <GoalsSection />

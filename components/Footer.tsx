@@ -45,7 +45,7 @@ export default function Footer() {
               In partnership with AFTRACON, we are committed to empowering Africans and advancing sustainable development across the continent.
             </p>
             <div className="flex flex-col gap-1 text-xs text-[var(--fg-faint)]">
-              <span>Ibadan, Oyo State, Nigeria</span>
+              <span>Oluyole Estate, Ibadan, Oyo State, Nigeria</span>
               <a
                 href="mailto:info@bornstellar.com"
                 className="hover:text-[#E8500A] transition-colors"

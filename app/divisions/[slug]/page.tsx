@@ -4,7 +4,9 @@ import { divisions } from "@/lib/divisions";
 import PageHero from "@/components/PageHero";
 import CtaSection from "@/components/sections/CtaSection";
 import DivisionOverviewSection from "@/components/sections/DivisionOverviewSection";
+import DivisionShowcaseSection from "@/components/sections/DivisionShowcaseSection";
 import DivisionRelatedSection from "@/components/sections/DivisionRelatedSection";
+import { getDivisionShowcaseImages } from "@/lib/divisionShowcase";
 
 const divisionImages: Record<string, string> = {
   "information-technology":
@@ -67,6 +69,7 @@ export default async function DivisionDetailPage({
     "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop";
 
   const otherDivisions = divisions.filter((d) => d.slug !== slug).slice(0, 4);
+  const showcaseImages = await getDivisionShowcaseImages(division.slug, 3);
 
   const heroOverline = division.businessName
     ? `${division.icon} ${division.businessName}`
@@ -86,6 +89,7 @@ export default async function DivisionDetailPage({
         bgImage={img}
       />
       <DivisionOverviewSection division={division} />
+      <DivisionShowcaseSection divisionName={division.name} images={showcaseImages} />
       <DivisionRelatedSection otherDivisions={otherDivisions} />
       <CtaSection />
     </>

@@ -14,7 +14,7 @@ const faqs = [
       },
       {
         q: "Where is Bornstellar headquartered?",
-        a: "Our head office is in Ibadan, Oyo State, Nigeria. We are incorporated under the Companies and Allied Matters Act (CAMA), 2020.",
+        a: "Our head office is in Oluyole Estate, Ibadan, Oyo State, Nigeria. We are incorporated under the Companies and Allied Matters Act (CAMA), 2020.",
       },
       {
         q: "How many divisions does Bornstellar operate?",

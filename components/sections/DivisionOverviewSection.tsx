@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import type { Division } from "@/lib/divisions";
@@ -32,35 +33,80 @@ export default function DivisionOverviewSection({ division }: Props) {
 
             <p className="text-xl text-(--fg) leading-9 mb-8">{division.overview}</p>
 
-            {/* Approach / How We Work narrative */}
+            {/* Optional narrative */}
             {narrative && (
               <div className="border-l-2 border-orange/40 pl-6 mb-8">
                 <p className="text-sm text-(--fg-muted) leading-7 italic">{narrative}</p>
               </div>
             )}
 
-            {/* Sector categories as pills */}
-            {division.sectorCategories && division.sectorCategories.length > 0 && (
+            {division.audiences && division.audiences.length > 0 && (
               <div className="border-t border-(--border) pt-8 mt-8">
                 <p className="text-xs text-(--fg-faint) tracking-[0.25em] uppercase font-medium mb-4">
-                  {division.id === 11
-                    ? "Collaboration Partners"
-                    : division.id === 9
-                    ? "Clients Served"
-                    : division.id === 8
-                    ? "Client Segments"
-                    : "Focus Areas"}
+                  Who We Serve
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {division.sectorCategories.map((cat) => (
-                    <span
-                      key={cat}
-                      className="inline-flex items-center px-3 py-1 text-[11px] font-medium tracking-[0.08em] border border-(--border) text-(--fg-muted) bg-(--bg-alt) rounded-sm"
+                <div className="grid gap-4 md:grid-cols-2">
+                  {division.audiences.map((audience, index) => (
+                    <div
+                      key={audience.label}
+                      className={`group relative overflow-hidden rounded-sm border border-(--border) bg-(--bg-alt) p-5 min-h-44 transition-all duration-300 hover:border-orange/45 hover:bg-(--bg) ${
+                        index === 0 ? "md:col-span-2" : ""
+                      }`}
                     >
-                      {cat}
-                    </span>
+                      <div className="absolute top-0 left-0 h-0.5 w-full bg-linear-to-r from-orange/80 via-orange/25 to-transparent opacity-70" />
+                      <div className="flex items-center justify-between mb-3">
+                        <p className="text-sm font-semibold text-(--fg)">{audience.label}</p>
+                        <span className="text-[10px] text-orange tracking-[0.18em] font-bold tabular-nums">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+                      <p className="text-sm text-(--fg-muted) leading-6">
+                        {audience.description}
+                      </p>
+                    </div>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {division.whyItMatters && (
+              <div className="mt-8 border-l-2 border-orange/40 pl-6">
+                <p className="text-xs text-(--fg-faint) tracking-[0.25em] uppercase font-medium mb-3">
+                  Why It Matters
+                </p>
+                <p className="text-sm text-(--fg-muted) leading-7">{division.whyItMatters}</p>
+              </div>
+            )}
+
+            {division.brandLogoSrc && division.brandLink && (
+              <div className="mt-8 flex flex-col gap-4 rounded-sm border border-(--border) bg-(--bg-alt) p-6">
+                <div className="flex items-center gap-4">
+                  <div className="relative h-12 w-40 shrink-0">
+                    <Image
+                      src={division.brandLogoSrc}
+                      alt={division.businessName ?? division.name}
+                      fill
+                      className="object-contain object-left"
+                      sizes="160px"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-xs text-(--fg-faint) tracking-[0.25em] uppercase font-medium">
+                      Brand Link
+                    </p>
+                    <p className="text-sm text-(--fg-muted) leading-6">
+                      Operates under {division.businessName}.
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href={division.brandLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex h-11 w-fit items-center justify-center bg-orange px-5 text-xs font-semibold tracking-[0.15em] uppercase text-white transition-colors duration-300 hover:bg-orange-hover"
+                >
+                  Visit Zenith Site
+                </Link>
               </div>
             )}
           </FadeIn>

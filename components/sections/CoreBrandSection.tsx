@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const facts = [
   { k: "Founded", v: "2025" },
-  { k: "Headquarters", v: "Ibadan, Oyo State" },
+  { k: "Headquarters", v: "Oluyole Estate, Ibadan, Oyo State" },
   { k: "Divisions", v: "13" },
   { k: "Businesses Served", v: "30+" },
 ];
@@ -28,7 +28,7 @@ export default function CoreBrandSection() {
 
               <div className="flex flex-col gap-6 text-[var(--fg-muted)] text-[15px] leading-8">
                 <p>
-                  Bornstellar Limited is a Nigeria-incorporated, privately held company established in 2025 as a diversified, multi-division platform designed to deliver integrated solutions across Africa's most critical sectors. Headquartered in Ibadan, Oyo State, the company operates through specialized divisions spanning information technology, agriculture, real estate, manufacturing, construction, trading, energy, automotive, research, consulting, and forensic services.
+                  Bornstellar Limited is a Nigeria-incorporated, privately held company established in 2025 as a diversified, multi-division platform designed to deliver integrated solutions across Africa's most critical sectors. Headquartered in Oluyole Estate, Ibadan, Oyo State, the company operates through specialized divisions spanning information technology, agriculture, real estate, manufacturing, construction, trading, energy, automotive, research, consulting, and forensic services.
                 </p>
                 <p>
                   The company was formed through the consolidation of two existing businesses — AFTRACON and Zenith Multipurposes — which now function as core divisions within the Bornstellar structure. Since inception, Bornstellar has served over 30 businesses across both B2B and B2C segments, establishing a foundation for scalable growth.
