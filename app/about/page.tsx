@@ -10,7 +10,7 @@ import QuickFactsSection from "@/components/sections/QuickFactsSection";
 export const metadata: Metadata = {
   title: "About Bornstellar — Nigeria's Multi-Division Corporate Platform",
   description:
-    "Learn about Bornstellar Limited — our vision, mission, core values, and Africa-first strategy across 12 specialised divisions.",
+    "Learn about Bornstellar Limited — our vision, mission, core values, and Africa-first strategy across 12 specialised divisions",
 };
 
 export default function AboutPage() {
