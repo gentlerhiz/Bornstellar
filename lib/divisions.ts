@@ -503,8 +503,8 @@ export const divisions: Division[] = [
     ],
     whyItMatters:
       "The division turns visibility into structured brand value through content, strategy, and ongoing digital execution. It reflects existing service strengths already associated with Zenith Multipurposes and gives Bornstellar a commercially relevant presence in media and communications.",
-    brandLogoSrc: "/zenith-multipurposes-logo.svg",
-    brandLink: "https://zenithmultipurposes.com",
+    brandLogoSrc: "/zenithlogo.jpeg",
+    brandLink: "https://www.zenithservices.com.ng/",
     icon: "📱",
   },
 ];

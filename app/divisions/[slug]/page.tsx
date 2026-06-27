@@ -28,7 +28,7 @@ const divisionImages: Record<string, string> = {
   "forensic-financial-services":
     "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=85&auto=format&fit=crop",
   automotive:
-    "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1400&q=85&auto=format&fit=crop",
+    "/divisionsImages/Automotive%20Manufacturing%20%26%20Distribution/auto-assembly-line.jpg",
   "research-development":
     "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=1400&q=90&auto=format&fit=crop",
   "renewable-energy":

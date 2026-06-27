@@ -11,19 +11,14 @@ const showcaseFolderBySlug: Record<string, string> = {
   automotive: "Automotive Manufacturing & Distribution",
   "research-development": "Research & Development",
   "renewable-energy": "Renewable Energy Solutions",
-  "media-digital-management": "Media & Digital Management",
+  "media-digital-management": "Branding",
 };
 
 const showcaseImagesBySlug: Record<string, string[]> = {
   "information-technology": [
-    "Use for african IT .jpg",
-    "Use for african IT2.jpeg",
-    "Use for african It3.jpeg",
     "a33bfb7f-ab7c-4f5b-bf67-b75f9991441c_234136354.jpg",
     "a443ef6d-7aa0-419c-97c1-c31bbf7755d7_234244789.JPG",
     "aaa.jpg",
-    "b803d752-6e09-4ad6-bafb-551a0911b9ca_234237529.jpeg",
-    "b803d752-6e09-4ad6-bafb-551a0911b9ca_2342375291.jpg",
   ],
   "agricultural-business": [
     "1811b9d2-5e17-4293-81ae-4a49a5a7d7e4_235356671.jpg",
@@ -102,10 +97,9 @@ const showcaseImagesBySlug: Record<string, string[]> = {
     "solar-panel-produces-green-environmentaly-friendly-energy-from-setting-sun-aerial-view-from-drone.jpg",
   ],
   "media-digital-management": [
-    "branding-png-word-sticker-mixed-media-design-transparent-background.jpg",
-    "hand-holding-smartphone-social-media-concept.jpg",
-    "online-marketing-branding-concept-laptop-screen.jpg",
-    "social-media-communication-networking-online-concept.jpg",
+    "b14.jpeg",
+    "b18.jpeg",
+    "b17.jpeg",
   ],
   automotive: [
     "africa-cars-industry.jpg",

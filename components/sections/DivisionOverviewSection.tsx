@@ -81,23 +81,18 @@ export default function DivisionOverviewSection({ division }: Props) {
             {division.brandLogoSrc && division.brandLink && (
               <div className="mt-8 flex flex-col gap-4 rounded-sm border border-(--border) bg-(--bg-alt) p-6">
                 <div className="flex items-center gap-4">
-                  <div className="relative h-12 w-40 shrink-0">
+                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-(--border) bg-white p-1 shadow-sm">
                     <Image
                       src={division.brandLogoSrc}
                       alt={division.businessName ?? division.name}
                       fill
-                      className="object-contain object-left"
-                      sizes="160px"
+                      className="rounded-full object-cover"
+                      sizes="56px"
                     />
                   </div>
-                  <div>
-                    <p className="text-xs text-(--fg-faint) tracking-[0.25em] uppercase font-medium">
-                      Brand Link
-                    </p>
-                    <p className="text-sm text-(--fg-muted) leading-6">
-                      Operates under {division.businessName}.
-                    </p>
-                  </div>
+                  <span className="text-base font-semibold text-(--fg)">
+                    Zenith Multipurposes
+                  </span>
                 </div>
                 <Link
                   href={division.brandLink}
@@ -105,7 +100,7 @@ export default function DivisionOverviewSection({ division }: Props) {
                   rel="noreferrer"
                   className="inline-flex h-11 w-fit items-center justify-center bg-orange px-5 text-xs font-semibold tracking-[0.15em] uppercase text-white transition-colors duration-300 hover:bg-orange-hover"
                 >
-                  Visit Zenith Site
+                  Visit Website
                 </Link>
               </div>
             )}

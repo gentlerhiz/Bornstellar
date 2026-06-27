@@ -15,19 +15,10 @@ export default function DivisionShowcaseSection({ divisionName, images }: Props)
     <section className="bg-(--bg-alt) py-24 border-b border-(--border)">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <FadeIn>
-          <div className="flex flex-col gap-4 mb-12">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-px bg-orange" />
-              <p className="text-sm text-orange tracking-[0.35em] uppercase font-semibold">
-                Division Showcase
-              </p>
-            </div>
+          <div className="mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-(--fg) leading-tight max-w-3xl">
               {divisionName} in action
             </h2>
-            <p className="text-sm text-(--fg-muted) leading-7 max-w-2xl">
-              A visual snapshot of project environments, operations, and field delivery across this division.
-            </p>
           </div>
         </FadeIn>
 
