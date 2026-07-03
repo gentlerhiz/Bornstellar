@@ -9,6 +9,19 @@ interface Props {
 
 export default function DivisionOverviewSection({ division }: Props) {
   const narrative = division.approach ?? division.howWeWork;
+  const audiencePriority = (label: string) => {
+    const normalized = label.toLowerCase();
+
+    if (normalized.includes("business")) return 0;
+    if (normalized.includes("investor")) return 1;
+    if (normalized.includes("individual") || normalized.includes("person") || normalized.includes("consumer")) return 2;
+
+    return 3;
+  };
+
+  const orderedAudiences = [...(division.audiences ?? [])].sort(
+    (a, b) => audiencePriority(a.label) - audiencePriority(b.label),
+  );
 
   return (
     <section className="bg-(--bg) py-24 border-b border-(--border)">
@@ -40,19 +53,22 @@ export default function DivisionOverviewSection({ division }: Props) {
               </div>
             )}
 
-            {division.audiences && division.audiences.length > 0 && (
+            {orderedAudiences.length > 0 && (
               <div className="border-t border-(--border) pt-8 mt-8">
                 <p className="text-xs text-(--fg-faint) tracking-[0.25em] uppercase font-medium mb-4">
                   Who We Serve
                 </p>
                 <div className="grid gap-4 md:grid-cols-2">
-                  {division.audiences.map((audience, index) => (
-                    <div
-                      key={audience.label}
-                      className={`group relative overflow-hidden rounded-sm border border-(--border) bg-(--bg-alt) p-5 min-h-44 transition-all duration-300 hover:border-orange/45 hover:bg-(--bg) ${
-                        index === 0 ? "md:col-span-2" : ""
-                      }`}
-                    >
+                  {orderedAudiences.map((audience, index) => {
+                    const isStandaloneLastCard = orderedAudiences.length === 3 && index === 2;
+
+                    return (
+                      <div
+                        key={audience.label}
+                        className={`group relative overflow-hidden rounded-sm border border-(--border) bg-(--bg-alt) p-5 min-h-44 transition-all duration-300 hover:border-orange/45 hover:bg-(--bg) ${
+                          isStandaloneLastCard ? "md:col-span-2" : ""
+                        }`}
+                      >
                       <div className="absolute top-0 left-0 h-0.5 w-full bg-linear-to-r from-orange/80 via-orange/25 to-transparent opacity-70" />
                       <div className="flex items-center justify-between mb-3">
                         <p className="text-sm font-semibold text-(--fg)">{audience.label}</p>
@@ -64,7 +80,8 @@ export default function DivisionOverviewSection({ division }: Props) {
                         {audience.description}
                       </p>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}

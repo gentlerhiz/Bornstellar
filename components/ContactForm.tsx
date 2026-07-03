@@ -2,6 +2,16 @@
 
 import { useState } from "react";
 
+const initialState = {
+  name: "",
+  organization: "",
+  email: "",
+  phone: "",
+  division: "",
+  subject: "",
+  message: "",
+};
+
 const divisionInterests = [
   "Information Technology Services",
   "Agricultural Business",
@@ -20,15 +30,9 @@ const divisionInterests = [
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    organization: "",
-    email: "",
-    phone: "",
-    division: "",
-    subject: "",
-    message: "",
-  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [form, setForm] = useState(initialState);
 
   function handleChange(
     e: React.ChangeEvent<
@@ -38,11 +42,39 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
-    // TODO: wire to Resend / Formspree / server action
-    setSubmitted(true);
+    if (!form.name || !form.email || !form.message || !form.subject) return;
+
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Unable to send your message right now.");
+      }
+
+      setSubmitted(true);
+      setForm(initialState);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Unable to send your message right now."
+      );
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   if (submitted) {
@@ -194,11 +226,15 @@ export default function ContactForm() {
           className="w-full bg-(--bg) border border-(--border) px-4 py-3 text-sm text-(--fg) placeholder:text-(--fg-faint) focus:outline-none focus:border-orange transition-colors duration-200 resize-none"
         />
       </div>
+      {error ? (
+        <p className="text-sm text-red-600">{error}</p>
+      ) : null}
       <button
         type="submit"
-        className="h-12 px-10 bg-orange text-white text-xs font-semibold tracking-[0.15em] uppercase hover:bg-orange-hover transition-colors duration-300 self-start"
+        disabled={isLoading}
+        className="h-12 px-10 bg-orange text-white text-xs font-semibold tracking-[0.15em] uppercase hover:bg-orange-hover transition-colors duration-300 self-start disabled:cursor-not-allowed disabled:opacity-70"
       >
-        Send Message
+        {isLoading ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
