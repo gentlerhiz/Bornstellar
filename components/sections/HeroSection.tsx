@@ -27,7 +27,7 @@ const heroSlides = [
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1800&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     // overline: "Food & Agricultural Systems",
     headline: ["Strengthening", "Africa's food", "value chains."],
     sub: "From primary production to market access — building resilient food systems across the continent.",

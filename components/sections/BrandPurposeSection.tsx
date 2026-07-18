@@ -56,7 +56,7 @@ export default function BrandPurposeSection() {
           {/* Right — image */}
           <FadeIn delay={0.15} className="relative overflow-hidden rounded-sm aspect-4/3 lg:aspect-5/4">
             <Image
-              src="/Africa2.jpeg"
+              src="/Droneguy1.jpeg"
               alt="Earth from space with Africa in view — global connectivity"
               fill
               className="object-cover object-center"

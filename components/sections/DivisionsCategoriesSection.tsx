@@ -24,15 +24,15 @@ const divisionImages: Record<string, string> = {
   "business-consulting":
     "https://images.unsplash.com/photo-1573164574511-73c773193279?w=900&q=85&auto=format&fit=crop",
   "forensic-financial-services":
-    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=900&q=85&auto=format&fit=crop",
+    "/Money1.jpg",
   automotive:
     "/divisionsImages/Automotive%20Manufacturing%20%26%20Distribution/auto-assembly-line.jpg",
   "research-development":
-    "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=900&q=90&auto=format&fit=crop",
+    "/Droneguy1.jpeg",
   "renewable-energy":
     "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&q=85&auto=format&fit=crop",
   "media-digital-management":
-    "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=900&q=85&auto=format&fit=crop",
+    "/handsonlaptop.jpg",
 };
 
 export default function DivisionsCategoriesSection() {
@@ -72,7 +72,7 @@ export default function DivisionsCategoriesSection() {
                 tabIndex={0}
                 role="button"
               >
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-4/3">
                   <Image
                     src={
                       divisionImages[division.slug] ??
