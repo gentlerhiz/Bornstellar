@@ -47,10 +47,10 @@ export default function Footer() {
             <div className="flex flex-col gap-1 text-xs text-[var(--fg-faint)]">
               <span>Oluyole Estate, Ibadan, Oyo State, Nigeria</span>
               <a
-                href="mailto:info@bornstellar.com"
+                href="mailto:Bornstellarltd@gmail.com"
                 className="hover:text-[#E8500A] transition-colors"
               >
-                info@bornstellar.com
+                Bornstellarltd@gmail.com
               </a>
             </div>
           </div>

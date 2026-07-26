@@ -2,11 +2,11 @@ import FadeIn from "@/components/FadeIn";
 import ContactForm from "@/components/ContactForm";
 
 const emailContacts = [
-  { label: "General", email: "info@bornstellar.com" },
-  { label: "Partnerships & Corporate", email: "partnerships@bornstellar.com" },
-  { label: "Media & Investor Relations", email: "media@bornstellar.com" },
-  { label: "Careers", email: "careers@bornstellar.com" },
-  { label: "Ethics & Compliance", email: "ethics@bornstellar.com" },
+  { label: "General", email: "Bornstellarltd@gmail.com" },
+  // { label: "Partnerships & Corporate", email: "partnerships@bornstellar.com" },
+  // { label: "Media & Investor Relations", email: "media@bornstellar.com" },
+  // { label: "Careers", email: "careers@bornstellar.com" },
+  // { label: "Ethics & Compliance", email: "ethics@bornstellar.com" },
 ];
 
 export default function ContactMainSection() {

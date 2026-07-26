@@ -25,8 +25,8 @@ export default function LegalPrivacySection() {
               without explicit consent, except as required by law or as necessary
               to deliver services explicitly requested by the user. For
               privacy-related enquiries, contact{" "}
-              <a href="mailto:info@bornstellar.com" className="text-orange hover:underline">
-                info@bornstellar.com
+              <a href="mailto:Bornstellarltd@gmail.com" className="text-orange hover:underline">
+                Bornstellarltd@gmail.com
               </a>
               .
             </p>
