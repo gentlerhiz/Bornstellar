@@ -22,8 +22,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const fromAddress =
-      process.env.RESEND_FROM_EMAIL || "Bornstellar Website <onboarding@resend.dev>";
+    const fromAddress = "Bornstellar Website <onboarding@resend.dev>";
 
     const data = await resend.emails.send({
       from: fromAddress,
