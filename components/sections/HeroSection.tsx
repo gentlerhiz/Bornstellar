@@ -145,21 +145,30 @@ export default function HeroSection() {
 
               <div className="mb-7">
                 <AnimatePresence mode="wait">
-                  {slide.headline.map((line, i) => (
-                    <div key={`${slide.id}-${i}`} className="overflow-hidden">
-                      <motion.h1
-                        initial={{ y: "105%" }}
-                        animate={{ y: 0 }}
-                        exit={{ y: "-105%", opacity: 0 }}
-                        transition={{ duration: 0.75, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                        className={`block text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight ${
-                          i === 2 ? "text-orange" : "text-white"
-                        }`}
-                      >
-                        {line}
-                      </motion.h1>
-                    </div>
-                  ))}
+                  <motion.div
+                    key={`headline-${slide.id}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.35, ease: "easeOut" }}
+                    className="w-full"
+                  >
+                    {slide.headline.map((line, i) => (
+                      <div key={`${slide.id}-${i}`} className="overflow-hidden">
+                        <motion.h1
+                          initial={{ y: "105%" }}
+                          animate={{ y: 0 }}
+                          exit={{ y: "-105%", opacity: 0 }}
+                          transition={{ duration: 0.75, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                          className={`block text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight ${
+                            i === 2 ? "text-orange" : "text-white"
+                          }`}
+                        >
+                          {line}
+                        </motion.h1>
+                      </div>
+                    ))}
+                  </motion.div>
                 </AnimatePresence>
               </div>
 

@@ -137,7 +137,7 @@ export default function WhoWeAreSection() {
             {/* Caption overlay — bottom left. Tab indicators moved inside for better mobile layout */}
             <div className="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8 lg:p-12 relative lg:top-[75%] lg:bottom-auto lg:translate-y-[200px]">
               <div className="max-w-2xl">
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="sync">
                   <motion.div
                     key={`caption-${tab.id}`}
                     initial={{ opacity: 0, y: 16 }}
